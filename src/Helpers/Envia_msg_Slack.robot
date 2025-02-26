@@ -5,15 +5,14 @@ Library     ../Helpers/Get_Resultado_Automacao.py
 Library     RequestsLibrary
 Library     Collections
 Library     OperatingSystem
-# Library    Get_Envs
-# Library    Get_Envs
  
 
 *** Tasks ***
 Report_Tests
     ${result}    Creat_Report_Body
 
-    ${ENVS}    Get Environment Variables
+    ${ENVS} =   Get_Envs . Get Environment Variables  
+
     Curl_Request    ${result}    ${ENVS['SLACK_INCOMING_WEBHOOK_URL']}
 
 *** Keywords ***

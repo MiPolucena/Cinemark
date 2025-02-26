@@ -1,266 +1,131 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-02-25T17:19:53.853413" rpa="false" schemaversion="5">
-<suite id="s1" name="F04 AlteraCadUsuario" source="c:\Git\Cinemark\src\Selenium\TestCases\F04_AlteraCadUsuario.robot">
-<test id="s1-t1" name="CT01: Efetuar alteração no cadastro do usuário" line="9">
-<kw name="Dado que esteja na página home" owner="F04_AlteraCadUsuarioResources">
-<kw name="Abrir página home" owner="CommonsKeywords">
-<kw name="Disable Request Warning" owner="Request_Warning">
-<status status="PASS" start="2025-02-25T17:19:54.759510" elapsed="0.000166"/>
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-02-26T15:24:32.767698" rpa="true" schemaversion="5">
+<suite id="s1" name="Envia msg Slack" source="c:\Git\Cinemark\src\Helpers\Envia_msg_Slack.robot">
+<test id="s1-t1" name="Report_Tests" line="11">
+<kw name="Creat_Report_Body">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-02-26T15:24:33.458883" level="INFO">${reportWebCinemark} = LogWebCinemark\output.xml</msg>
+<var>${reportWebCinemark}</var>
+<arg>LogWebCinemark\\output.xml</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-02-26T15:24:33.458651" elapsed="0.002097"/>
+</kw>
+<kw name="Get Absolute Path" owner="Absolute_path">
+<msg time="2025-02-26T15:24:33.627699" level="INFO">${pathWebCinemark} = C:\Git\Cinemark\LogWebCinemark\output.xml</msg>
+<var>${pathWebCinemark}</var>
+<arg>${reportWebCinemark}</arg>
+<status status="PASS" start="2025-02-26T15:24:33.461044" elapsed="0.166861"/>
+</kw>
+<kw name="Get Resultado Automacao" owner="Get_Resultado_Automacao">
+<msg time="2025-02-26T15:24:33.699400" level="INFO">${msgWebCinemark} = *==============================================================*
+🤖 Resultado dos Testes (26/02/2025 15:24)
+
+
+*➔  WEBCINEMARK:*
+
+✅ Total de casos executados com sucesso: *4*
+❌ Total de casos executados...</msg>
+<var>${msgWebCinemark}</var>
+<arg>${pathWebCinemark}</arg>
+<arg>WebCinemark</arg>
+<status status="PASS" start="2025-02-26T15:24:33.628102" elapsed="0.071502"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-02-26T15:24:33.700235" level="INFO">${result} = *==============================================================*
+🤖 Resultado dos Testes (26/02/2025 15:24)
+
+
+*➔  WEBCINEMARK:*
+
+✅ Total de casos executados com sucesso: *4*
+❌ Total de casos executados...</msg>
+<var>${result}</var>
+<arg>${msgWebCinemark}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-02-26T15:24:33.699789" elapsed="0.000584"/>
+</kw>
+<kw name="Create File" owner="OperatingSystem">
+<msg time="2025-02-26T15:24:33.703396" level="INFO" html="true">Created file '&lt;a href="file://C:\Git\Cinemark\report\test_status.txt"&gt;C:\Git\Cinemark\report\test_status.txt&lt;/a&gt;'.</msg>
+<arg>report/test_status.txt</arg>
+<arg>${result}</arg>
+<doc>Creates a file with the given content and encoding.</doc>
+<status status="PASS" start="2025-02-26T15:24:33.700516" elapsed="0.003190"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-26T15:24:38.705127" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-26T15:24:33.703933" elapsed="5.001555"/>
+</kw>
+<return>
+<value>${result}</value>
+<status status="PASS" start="2025-02-26T15:24:38.705689" elapsed="0.000189"/>
+</return>
+<msg time="2025-02-26T15:24:38.706304" level="INFO">${result} = *==============================================================*
+🤖 Resultado dos Testes (26/02/2025 15:24)
+
+
+*➔  WEBCINEMARK:*
+
+✅ Total de casos executados com sucesso: *4*
+❌ Total de casos executados...</msg>
+<var>${result}</var>
+<status status="PASS" start="2025-02-26T15:24:33.457805" elapsed="5.248732"/>
 </kw>
 <kw name="Get Environment Variables" owner="Get_Envs">
-<msg time="2025-02-25T17:19:54.761669" level="INFO">${ENVS} = {'USER': 'mirian.inacio+3@mblabs.com.br', 'PASSWORD': 'Cinemark123456!', 'BASE_URL': 'https://ar-qa-www-ext.cinemark.com.ar/'}</msg>
+<msg time="2025-02-26T15:24:38.709831" level="INFO">${ENVS} = {'SLACK_INCOMING_WEBHOOK_URL': 'https://hooks.slack.com/services/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', 'USER': 'mirian.inacio+3@mblabs.com.br', 'PASSWORD': 'Cinemark123456!', 'BASE_URL': 'h...</msg>
 <var>${ENVS}</var>
-<status status="PASS" start="2025-02-25T17:19:54.759859" elapsed="0.003679"/>
+<status status="PASS" start="2025-02-26T15:24:38.707431" elapsed="0.002572"/>
 </kw>
-<kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2025-02-25T17:19:54.764146" level="INFO">${ENVS} = {'USER': 'mirian.inacio+3@mblabs.com.br', 'PASSWORD': 'Cinemark123456!', 'BASE_URL': 'https://ar-qa-www-ext.cinemark.com.ar/'}</msg>
-<arg>${ENVS}</arg>
-<arg>${ENVS}</arg>
-<doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2025-02-25T17:19:54.763821" elapsed="0.000486"/>
+<kw name="Curl_Request">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-02-26T15:24:38.712209" level="INFO">${headers} = {'Content-type': 'application/json'}</msg>
+<var>${headers}</var>
+<arg>Content-type=application/json</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-02-26T15:24:38.711837" elapsed="0.000487"/>
 </kw>
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-02-25T17:19:54.764854" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000002B6B79B6A50&gt;</msg>
-<var>${options}</var>
-<arg>selenium.webdriver.ChromeOptions()</arg>
-<arg>selenium.webdriver</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-02-25T17:19:54.764500" elapsed="0.000457"/>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-02-26T15:24:38.712724" level="INFO">${json_data} = {'text': '*==============================================================*\n🤖 Resultado dos Testes (26/02/2025 15:24)\n\n\n*➔  WEBCINEMARK:*\n\n✅ Total de casos executados com sucesso: *4*\n❌ Total de...</msg>
+<var>${json_data}</var>
+<arg>text=${msg}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-02-26T15:24:38.712474" elapsed="0.000363"/>
 </kw>
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-02-25T17:19:54.765435" level="INFO">${prefs} = {'profile.default_content_setting_values.media_stream_mic': 1, 'profile.default_content_setting_values.media_stream_camera': 1, 'profile.default_content_setting_values.geolocation': 1, 'profile.defaul...</msg>
-<var>${prefs}</var>
-<arg>{'profile.default_content_setting_values.media_stream_mic': 1, 'profile.default_content_setting_values.media_stream_camera': 1, 'profile.default_content_setting_values.geolocation': 1, 'profile.default_content_setting_values.notifications': 1}</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-02-25T17:19:54.765138" elapsed="0.000399"/>
+<kw name="POST" owner="RequestsLibrary">
+<msg time="2025-02-26T15:24:39.365663" level="INFO">POST Request : url=https://hooks.slack.com/services/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 
+ path_url=/services/T06JRN0TA/B07EW90BM3M/xsdphse6rrLkQ0FS5FwIQS0n 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-type': 'application/json', 'Content-Length': '1005'} 
+ body=b'{"text": "*==============================================================*\\n\\ud83e\\udd16 Resultado dos Testes (26/02/2025 15:24)\\n\\n\\n*\\u2794  WEBCINEMARK:*\\n\\n\\u2705 Total de casos executados com sucesso: *4*\\n\\u274c Total de casos executados com falha: *1*\\n\\n\\n*Casos de teste com falhas:*\\n- Erro: Elemento xpath=/html/body/div[4]/div[3]/div[2]/div/div[5]/div/div[3]/button n\\u00e3o foi encontrado durante a execu\\u00e7\\u00e3o do caso de teste: CT01: Efetuar altera\\u00e7\\u00e3o no cadastro do usu\\u00e1rio\\n- Clicar no elemento\\n- Erro: Elemento xpath=/html/body/div[4]/div[3]/div[2]/div/div[5]/div/div[3]/button n\\u00e3o foi encontrado durante a execu\\u00e7\\u00e3o do caso de teste: CT01: Efetuar altera\\u00e7\\u00e3o no cadastro do usu\\u00e1rio\\n- Wait Until Element Is Visible\\n- Erro: Elemento xpath=/html/body/div[4]/div[3]/div[2]/div/div[5]/div/div[3]/button n\\u00e3o foi encontrado durante a execu\\u00e7\\u00e3o do caso de teste: CT01: Efetuar altera\\u00e7\\u00e3o no cadastro do usu\\u00e1rio\\n"}' 
+ </msg>
+<msg time="2025-02-26T15:24:39.365908" level="INFO">POST Response : url=https://hooks.slack.com/services/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 
+ status=200, reason=OK 
+ headers={'date': 'Wed, 26 Feb 2025 18:24:38 GMT', 'server': 'Apache', 'vary': 'Accept-Encoding', 'strict-transport-security': 'max-age=31536000; includeSubDomains; preload', 'referrer-policy': 'no-referrer', 'x-slack-unique-id': 'Z79cZtMx1er8ywP_w8_TKgAAEBk', 'x-slack-backend': 'r', 'access-control-allow-origin': '*', 'x-frame-options': 'SAMEORIGIN', 'content-type': 'text/html', 'content-length': '2', 'via': '1.1 slack-prod.tinyspeck.com, envoy-www-iad-jhrdzvwc,envoy-edge-gru-tgfbujjf', 'x-envoy-attempt-count': '1', 'x-envoy-upstream-service-time': '207', 'x-backend': 'main_normal main_canary_with_overflow main_control_with_overflow', 'x-server': 'slack-www-hhvm-main-iad-kgip', 'x-slack-shared-secret-outcome': 'no-match', 'x-edge-backend': 'envoy-www', 'x-slack-edge-shared-secret-outcome': 'no-match'} 
+ body=ok 
+ </msg>
+<arg>url=${webhook}</arg>
+<arg>headers=${headers}</arg>
+<arg>json=${json_data}</arg>
+<arg>expected_status=200</arg>
+<doc>Sends a POST request.</doc>
+<status status="PASS" start="2025-02-26T15:24:38.712987" elapsed="0.653062"/>
 </kw>
-<kw name="Call Method" owner="BuiltIn">
-<arg>${options}</arg>
-<arg>add_argument</arg>
-<arg>--disable-infobars</arg>
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2025-02-25T17:19:54.765725" elapsed="0.000192"/>
+<arg>${result}</arg>
+<arg>${ENVS['SLACK_INCOMING_WEBHOOK_URL']}</arg>
+<status status="PASS" start="2025-02-26T15:24:38.710782" elapsed="0.655410"/>
 </kw>
-<kw name="Call Method" owner="BuiltIn">
-<arg>${options}</arg>
-<arg>add_experimental_option</arg>
-<arg>prefs</arg>
-<arg>${prefs}</arg>
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2025-02-25T17:19:54.766077" elapsed="0.000211"/>
-</kw>
-<kw name="Create Webdriver" owner="SeleniumLibrary">
-<msg time="2025-02-25T17:19:54.766686" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
-<arg>Chrome</arg>
-<arg>options=${options}</arg>
-<doc>Creates an instance of Selenium WebDriver.</doc>
-<status status="PASS" start="2025-02-25T17:19:54.766444" elapsed="1.386363"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-02-25T17:19:56.153053" elapsed="0.023779"/>
-</kw>
-<kw name="Go To" owner="SeleniumLibrary">
-<msg time="2025-02-25T17:19:56.178510" level="INFO">Opening url 'https://ar-qa-www-ext.cinemark.com.ar/'</msg>
-<arg>${ENVS['BASE_URL']}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2025-02-25T17:19:56.177281" elapsed="2.734008"/>
-</kw>
-<status status="PASS" start="2025-02-25T17:19:54.758862" elapsed="4.152628"/>
-</kw>
-<status status="PASS" start="2025-02-25T17:19:54.758385" elapsed="4.153185"/>
-</kw>
-<kw name="Quando efetuar o login com usuário e senha válidos" owner="F04_AlteraCadUsuarioResources">
-<kw name="Clicar no Perfil do Usuário" owner="CommonsKeywords">
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-02-25T17:20:08.914243" level="INFO">Slept 10 seconds.</msg>
-<arg>10</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-02-25T17:19:58.913603" elapsed="10.001249"/>
-</kw>
-<kw name="Clicar no elemento" owner="CommonsKeywords">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${ELEMENT}</arg>
-<arg>timeout=10</arg>
-<arg>error=Elemento ${ELEMENT} não foi encontrado durante a execução do caso de teste: ${TEST_NAME}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-02-25T17:20:08.916246" elapsed="0.032622"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-02-25T17:20:08.950042" level="INFO">Clicking element 'xpath=/html/body/div[4]/div[2]/div[2]/button'.</msg>
-<arg>${ELEMENT}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-25T17:20:08.949446" elapsed="0.071252"/>
-</kw>
-<arg>xpath=/html/body/div[4]/div[2]/div[2]/button</arg>
-<status status="PASS" start="2025-02-25T17:20:08.915400" elapsed="0.105509"/>
-</kw>
-<kw name="Clicar no elemento" owner="CommonsKeywords">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${ELEMENT}</arg>
-<arg>timeout=10</arg>
-<arg>error=Elemento ${ELEMENT} não foi encontrado durante a execução do caso de teste: ${TEST_NAME}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-02-25T17:20:09.021471" elapsed="0.023060"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-02-25T17:20:09.045320" level="INFO">Clicking element 'xpath=//*[@id="cnk-header"]/div[1]/div[1]/div/div[2]/button[3]'.</msg>
-<arg>${ELEMENT}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-25T17:20:09.044875" elapsed="0.136543"/>
-</kw>
-<arg>${Perfil}</arg>
-<status status="PASS" start="2025-02-25T17:20:09.021093" elapsed="0.160603"/>
-</kw>
-<arg>${Perfil}</arg>
-<status status="PASS" start="2025-02-25T17:19:58.913161" elapsed="10.268646"/>
-</kw>
-<kw name="Iniciar login com usuário e senha válidos" owner="CommonsKeywords">
-<kw name="Inserir texto" owner="CommonsKeywords">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${FIELD}</arg>
-<arg>error=Elemento ${FIELD} não foi encontrado durante a execução do caso de teste: ${TEST_NAME}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-02-25T17:20:09.182878" elapsed="0.033419"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-02-25T17:20:09.216901" level="INFO">Typing text 'mirian.inacio+3@mblabs.com.br' into text field 'xpath=//*[@id="email"]'.</msg>
-<arg>${FIELD}</arg>
-<arg>${Text}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-25T17:20:09.216585" elapsed="0.174505"/>
-</kw>
-<arg>${Input_Usuario}</arg>
-<arg>mirian.inacio+3@mblabs.com.br</arg>
-<status status="PASS" start="2025-02-25T17:20:09.182509" elapsed="0.208957"/>
-</kw>
-<kw name="Inserir texto" owner="CommonsKeywords">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${FIELD}</arg>
-<arg>error=Elemento ${FIELD} não foi encontrado durante a execução do caso de teste: ${TEST_NAME}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-02-25T17:20:09.392143" elapsed="0.014006"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-02-25T17:20:09.406951" level="INFO">Typing text 'Cinemark123456!' into text field 'xpath=//*[@id="password"]'.</msg>
-<arg>${FIELD}</arg>
-<arg>${Text}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-25T17:20:09.406566" elapsed="0.102931"/>
-</kw>
-<arg>${Input_Senha}</arg>
-<arg>Cinemark123456!</arg>
-<status status="PASS" start="2025-02-25T17:20:09.391765" elapsed="0.117973"/>
-</kw>
-<kw name="Clicar no elemento" owner="CommonsKeywords">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${ELEMENT}</arg>
-<arg>timeout=10</arg>
-<arg>error=Elemento ${ELEMENT} não foi encontrado durante a execução do caso de teste: ${TEST_NAME}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-02-25T17:20:09.510300" elapsed="0.018752"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-02-25T17:20:09.529589" level="INFO">Clicking element 'xpath=/html/body/div[4]/div[3]/div[2]/form/div[2]/button[1]'.</msg>
-<arg>${ELEMENT}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-25T17:20:09.529323" elapsed="0.120683"/>
-</kw>
-<arg>${Botao_Iniciar_Session}</arg>
-<status status="PASS" start="2025-02-25T17:20:09.509940" elapsed="0.140309"/>
-</kw>
-<status status="PASS" start="2025-02-25T17:20:09.182025" elapsed="0.468395"/>
-</kw>
-<kw name="Clicar no elemento" owner="CommonsKeywords">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${ELEMENT}</arg>
-<arg>timeout=10</arg>
-<arg>error=Elemento ${ELEMENT} não foi encontrado durante a execução do caso de teste: ${TEST_NAME}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-02-25T17:20:09.651203" elapsed="2.381436"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-02-25T17:20:12.033772" level="INFO">Clicking element 'xpath=/html/body/div[4]/div[3]/div/div/button'.</msg>
-<arg>${ELEMENT}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-25T17:20:12.033175" elapsed="0.122773"/>
-</kw>
-<arg>${Botao_Fechar_Login}</arg>
-<status status="PASS" start="2025-02-25T17:20:09.650717" elapsed="2.505486"/>
-</kw>
-<status status="PASS" start="2025-02-25T17:19:58.912673" elapsed="13.243639"/>
-</kw>
-<kw name="E acessar o perfil para fazer alteração de cadastro" owner="F04_AlteraCadUsuarioResources">
-<kw name="Clicar no elemento" owner="CommonsKeywords">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${ELEMENT}</arg>
-<arg>timeout=10</arg>
-<arg>error=Elemento ${ELEMENT} não foi encontrado durante a execução do caso de teste: ${TEST_NAME}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-02-25T17:20:12.158064" elapsed="0.019762"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-02-25T17:20:12.178426" level="INFO">Clicking element 'xpath=//*[@id="cnk-header"]/div[1]/div[1]/div/div[2]/button[3]/div/div/img'.</msg>
-<arg>${ELEMENT}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-25T17:20:12.178176" elapsed="0.287648"/>
-</kw>
-<arg>${Perfil_Cadastrado}</arg>
-<status status="PASS" start="2025-02-25T17:20:12.157550" elapsed="0.308662"/>
-</kw>
-<kw name="Clicar no elemento" owner="CommonsKeywords">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${ELEMENT}</arg>
-<arg>timeout=10</arg>
-<arg>error=Elemento ${ELEMENT} não foi encontrado durante a execução do caso de teste: ${TEST_NAME}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-02-25T17:20:12.467638" elapsed="2.225420"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-02-25T17:20:14.693719" level="INFO">Clicking element 'xpath=/html/body/div[4]/div[3]/div[2]/div/div[5]/div/div[3]/button'.</msg>
-<arg>${ELEMENT}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-25T17:20:14.693401" elapsed="0.140716"/>
-</kw>
-<arg>${Botao_Cuenta}</arg>
-<status status="PASS" start="2025-02-25T17:20:12.466549" elapsed="2.367761"/>
-</kw>
-<kw name="Inserir texto" owner="CommonsKeywords">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${FIELD}</arg>
-<arg>error=Elemento ${FIELD} não foi encontrado durante a execução do caso de teste: ${TEST_NAME}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-02-25T17:20:14.834929" elapsed="0.017021"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-02-25T17:20:14.852455" level="INFO">Typing text 'Mii' into text field 'xpath=//*[@id="lastName"]'.</msg>
-<arg>${FIELD}</arg>
-<arg>${Text}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-25T17:20:14.852193" elapsed="0.059257"/>
-</kw>
-<arg>${Input_Apelido}</arg>
-<arg>Mii</arg>
-<status status="PASS" start="2025-02-25T17:20:14.834521" elapsed="0.077135"/>
-</kw>
-<status status="PASS" start="2025-02-25T17:20:12.157009" elapsed="2.754742"/>
-</kw>
-<doc>Card-XXX</doc>
-<tag>F04CT01_AlteraCadUsuário</tag>
-<status status="PASS" start="2025-02-25T17:19:54.756712" elapsed="20.155611"/>
+<status status="PASS" start="2025-02-26T15:24:33.456803" elapsed="5.910335"/>
 </test>
-<doc>Suíte de testes de Validação do login do Perfil do Usuário</doc>
-<status status="PASS" start="2025-02-25T17:19:53.856769" elapsed="21.056705"/>
+<status status="PASS" start="2025-02-26T15:24:32.771151" elapsed="6.597289"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tasks</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">F04CT01_AlteraCadUsuário</stat>
 </tag>
 <suite>
-<stat name="F04 AlteraCadUsuario" id="s1" pass="1" fail="0" skip="0">F04 AlteraCadUsuario</stat>
+<stat name="Envia msg Slack" id="s1" pass="1" fail="0" skip="0">Envia msg Slack</stat>
 </suite>
 </statistics>
 <errors>

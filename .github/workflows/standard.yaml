@@ -41,7 +41,7 @@ jobs:
         uses: ./.github/actions/setup-composite
       - name: 🧪 Run Cinemark Web Robot Tests
         run: |
-          robot -d LogCinemarkWeb ./src/Selenium/TestCases
+          robot -d LogWebCinemark ./src/Selenium/TestCases
         continue-on-error: true
       - name: ⬆️ Upload Cinemark Web Test results
         uses: actions/upload-artifact@v4
