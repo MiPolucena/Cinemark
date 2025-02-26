@@ -39,6 +39,10 @@ jobs:
         uses: actions/checkout@v3
       - name: ⚙️ Default Steps
         uses: ./.github/actions/setup-composite
+      - name: 🛠 Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libasound2 libasound2-plugins libappindicator3-1 gconf2
       - name: 🧪 Run Cinemark Web Robot Tests
         run: |
           mkdir -p LogWebCinemarkReports
