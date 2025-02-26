@@ -2,93 +2,57 @@ on:
   push:
     branches:
       - main
-      - develop
       - "feature/**"
       - "fix/**"
-      - "release/**"
     paths-ignore:
       - "**/*.md"
       - .scafflater/**
-  pull_request:
+
+      pull_request:
     branches:
       - main
     paths-ignore:
       - "**/*.md"
       - .scafflater/**
   workflow_dispatch:
+  repository_dispatch:
+      types: ["Standard"]
+
 
 name: Standard
 
 env:
-  app_name: "testes"
+  app_name: "Testes Automação Cinemark Web"
   aws_region: "us-east-1"
   dockerfilePath: "dockerfiles/Dockerfile"
-  namespace: "robot-framework"
+  namespace: "Cinemark-Robot-Framework"
   value_stream: "robot-selenium"
   BASE_URL: ${{ vars.BASE_URL }}
-  BASE_API: ${{ vars.BASE_API }}
+  #BASE_API: ${{ vars.BASE_API }}
 
 jobs:
   ci_web:
-    name: CI - Test Web
+    name: CI - Test Cinemark Web
     runs-on: ubuntu-latest
     steps:
       - name: ⬇️ Checkout
         uses: actions/checkout@v3
       - name: ⚙️ Default Steps
         uses: ./.github/actions/setup-composite
-      - name: 🧪 Run Web Robot tests
+      - name: 🧪 Run Cinemark Web Robot Tests
         run: |
-          robot -d web ./src/Selenium/Clients/Index.robot
+          robot -d LogCinemarkWeb ./src/Selenium/TestCases
         continue-on-error: true
-      - name: ⬆️ Upload Web Test results
+      - name: ⬆️ Upload Cinemark Web Test results
         uses: actions/upload-artifact@v4
         with:
           name: web-report
           path: web
 
-  ci_api:
-    name: CI - Test Api
-    if: always ()
-    runs-on: ubuntu-latest
-    steps:
-      - name: ⬇️ Checkout
-        uses: actions/checkout@v3
-      - name: ⚙️ Default Steps
-        uses: ./.github/actions/setup-composite
-      - name: 🧪 Run Api Robot tests
-        run: |
-          robot -d api ./src/Robot/Clients/Api.robot
-        continue-on-error: true
-      - name: ⬆️ Upload Api Test results
-        uses: actions/upload-artifact@v4
-        with:
-          name: api-report
-          path: api
-
-  ci_mobile:
-    name: CI - Test Mobile
-    if: always ()
-    runs-on: ubuntu-latest
-    steps:
-      - name: ⬇️ Checkout
-        uses: actions/checkout@v3
-      - name: ⚙️ Default Steps
-        uses: ./.github/actions/setup-composite
-      - name: 🧪 Run Mobile Robot tests
-        run: |
-          # robot -d mobile ./src/Apium/Clients/Test.robot
-          echo "Rodando testes mobile"
-        continue-on-error: true
-      - name: ⬆️ Upload Mobile Test results
-        uses: actions/upload-artifact@v4
-        with:
-          name: mobile-report
-          path: mobile
-
+#ENVIO DE RESULTADO DOS TESTES EXECUTADOS PARA O SLACK:
   report_slack:
-    name: CI - Send Test Status to Slack
-    needs: [ci_web, ci_api, ci_mobile]
+    name: CI - ENVIA STATUS REPORT PARA SLACK
+    needs: [ci_web]
     if: always ()
     runs-on: ubuntu-latest
     steps:
@@ -102,9 +66,11 @@ jobs:
       - name: 📁 Rename paths
         run: |
           mv web-report web
-          mv api-report api
-          # mv mobile-report mobile
-      - name: 📨 Run Curl Message To Slack
-        run:
-          # robot ./Helpers/Curl_Slack.robot
-          echo "Enviando report de testes para o slack"
+      - name: 📨 Run Envio de Msg para Slack com Resultado dos Testes
+        run: |
+          robot -t Report_Tests ./Helpers/Envia_msg_Slack.robot
+      - name: ⬆️ Upload Test Results
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-report
+          path: report

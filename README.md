@@ -2,7 +2,8 @@
 
 
 # Projeto de automação Robot, Selenium e Appium
-Projeto criado para rodar testes automatizados de aceitação (e2e) no front-end e no back-end, utilizando as tecnologias do Robot Framework e as bibliotecas do Selenium e do Appium. Os testes devem ser capazes de serem rodados localmente e na pipeline
+Projeto criado para rodar testes automatizados de aceitação (e2e) no front-end e no back-end, utilizando as tecnologias do Robot Framework e as bibliotecas do Selenium e do Appium. 
+Os testes devem ser capazes de serem rodados localmente e na pipeline
 
 # Configuração do Ambiente
 
@@ -81,7 +82,7 @@ As configurações para inspecionar no Android, devem ficar parecidas com essas:
 - Massa de Dados
 - Geração de Report
 
-<br/>
+<!-- <br/>
 
 ### ---- Pré-Requisitos Testes Mobile (APP) ----
 - Instalação e Configuração: https://www.youtube.com/watch?v=W5hcHbzTjOc
@@ -93,9 +94,9 @@ As configurações para inspecionar no Android, devem ficar parecidas com essas:
 
 ### ---- Comandos para rodar testes no APP: ----
 
-<br/>
+<br/> -->
 
-*Observação: Para executar os testes com appium é preciso antes <u>inicializar o device pelo AVD Manager</u> no Android Studio.*
+<!-- *Observação: Para executar os testes com appium é preciso antes <u>inicializar o device pelo AVD Manager</u> no Android Studio.*
 
 <br/>
 
@@ -109,7 +110,5 @@ As configurações para inspecionar no Android, devem ficar parecidas com essas:
 > emulator -list-avds
 
 **Executar teste regressivo mobile**
-> npm run app
+> npm run app -->
 
-### EXTRAS
-- https://eliasnogueira.github.io/appium-workshop/
