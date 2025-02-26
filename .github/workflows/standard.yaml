@@ -41,13 +41,14 @@ jobs:
         uses: ./.github/actions/setup-composite
       - name: 🧪 Run Cinemark Web Robot Tests
         run: |
-          robot -d LogWebCinemark ./src/Selenium/TestCases
+          mkdir -p LogWebCinemarkReports
+          robot -d LogWebCinemarkReports ./src/Selenium/TestCases
         continue-on-error: true
       - name: ⬆️ Upload Cinemark Web Test results
         uses: actions/upload-artifact@v4
         with:
           name: web-report
-          path: web
+          path: LogWebCinemarkReports
 
 #ENVIO DE RESULTADO DOS TESTES EXECUTADOS PARA O SLACK:
   report_slack:
@@ -58,14 +59,26 @@ jobs:
     steps:
       - name: ⬇️ Checkout
         uses: actions/checkout@v3
-      - name: ⚙️ Default Steps
-        uses: ./.github/actions/setup-composite
-      - name: ⬇️ Download Artifacts
+      - name: Setup Python 3.10
+        uses: actions/setup-python@v3
+        with:
+          python-version: "3.10"
+      - name: Python Cache
+        uses: actions/cache@v3
+        id: cache
+        with:
+          path: /opt/hostedtoolcache/Python/
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          restore-keys: pip-
+      - name: ⬇️ Download web Artifact
         uses: actions/download-artifact@v4
-      - run: ls
-      - name: 📁 Rename paths
+        with:
+          name: web-report
+          path: ./artifacts/core
+      - name: 📁 Move Reports Without Unzipping
         run: |
-          mv web-report web
+          mkdir -p LogWebCinemarkReports 
+          mv ./artifacts/web/* LogWebCinemarkReports
       - name: 📨 Run Envio de Msg para Slack com Resultado dos Testes
         run: |
           robot -t Report_Tests ./Helpers/Envia_msg_Slack.robot
