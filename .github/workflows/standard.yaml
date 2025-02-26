@@ -8,7 +8,7 @@ on:
       - "**/*.md"
       - .scafflater/**
 
-      pull_request:
+  pull_request:
     branches:
       - main
     paths-ignore:
