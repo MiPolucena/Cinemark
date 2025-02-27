@@ -1,16 +1,8 @@
 *==============================================================*
-🤖 Resultado dos Testes (26/02/2025 15:24)
+![Robot Framework](https://robotframework.org/img/robot-framework-logo.png) Resultado dos Testes (27/02/2025 16:29)
 
 
 *➔  WEBCINEMARK:*
 
-✅ Total de casos executados com sucesso: *4*
-❌ Total de casos executados com falha: *1*
-
-
-*Casos de teste com falhas:*
-- Erro: Elemento xpath=/html/body/div[4]/div[3]/div[2]/div/div[5]/div/div[3]/button não foi encontrado durante a execução do caso de teste: CT01: Efetuar alteração no cadastro do usuário
-- Clicar no elemento
-- Erro: Elemento xpath=/html/body/div[4]/div[3]/div[2]/div/div[5]/div/div[3]/button não foi encontrado durante a execução do caso de teste: CT01: Efetuar alteração no cadastro do usuário
-- Wait Until Element Is Visible
-- Erro: Elemento xpath=/html/body/div[4]/div[3]/div[2]/div/div[5]/div/div[3]/button não foi encontrado durante a execução do caso de teste: CT01: Efetuar alteração no cadastro do usuário
+✅ Total de casos executados com sucesso: *5*
+❌ Total de casos executados com falha: *0*

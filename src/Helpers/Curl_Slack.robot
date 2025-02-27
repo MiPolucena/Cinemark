@@ -18,10 +18,10 @@ Send Curl to Slack
 Curl
     [Arguments]    ${msg}
 
-    ${curl_slack}    Get Enviroment Variables
-    ${endpoint}    Set Variable    ${curl_slack['SLACK_WEBHOOK']}
+    ${curl_slack}    Get Environment Variables
+    ${endpoint}      Set Variable    ${curl_slack['SLACK_WEBHOOK']}
 
-    ${headers}    Create Dictionary    Content-type=application/json
+    ${headers}      Create Dictionary    Content-type=application/json
     ${json_data}    Create Dictionary    message=${msg}
 
     POST    url=${endpoint}    headers=${headers}    json=${json_data}    expected_status=200

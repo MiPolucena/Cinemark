@@ -10,7 +10,8 @@ ${Perfil}                         xpath=//*[@id="cnk-header"]/div[1]/div[1]/div/
 ${Perfil_Cadastrado}              xpath=//*[@id="cnk-header"]/div[1]/div[1]/div/div[2]/button[3]/div/div/img
 
 #Botões
-${Botao_Accepto}                  xpath=xpath=/html/body/div[4]/div[2]/div[2]/button
+${Botao_Accepto}                  xpath=/html/body/div[4]/div[2]/div[2]/button
+#${Botao_Iniciar_Session}          xpath=//*[@data-testid='login_drawer_login_button']
 ${Botao_Iniciar_Session}          xpath=/html/body/div[4]/div[3]/div[2]/form/div[2]/button[1]
 ${Botao_Crear_Cuenta}             xpath=/html/body/div[4]/div[3]/div[2]/form/div[2]/button[3]
 ${Botao_Recupera_Senha}           xpath=/html/body/div[4]/div[3]/div[2]/form/div[2]/button[2]
@@ -40,6 +41,7 @@ ${Informacion_estrenos}           xpath=//*[@id="newsletterEnabled"]/span[2]
 ${Banner_Tela_Home}               xpath=(//img)[2]
 ${Banner_Tela_Home_Pontos}        xpath=/html/body/div[4]/div[3]/div/a/img
 ${Banner_Tela_Home_Olá}           xpath=/html/body/div[4]/div[3]/div/div
+#${Banner_Tela_Home_Olá}           xpath=/html/body/div[4]/div[3]/div/div
 ${Banner_Revisa_Email}            xpath=/html/body/div[4]/div[3]/div[2]/div/form/div[1]/h1
 
 

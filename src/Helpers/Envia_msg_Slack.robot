@@ -17,9 +17,9 @@ Report_Tests
 
 *** Keywords ***
 Creat_Report_Body
-    ${reportWebCinemark}        Set Variable               LogWebCinemark\\output.xml
-    ${pathWebCinemark}          Get Absolute Path          ${reportWebCinemark}
-    ${msgWebCinemark}           Get Resultado Automacao    ${pathWebCinemark}   WebCinemark
+    ${reportWebCinemark}        Set Variable                LogWebCinemarkReports\\output.xml
+    ${pathWebCinemark}          Get Absolute Path           ${reportWebCinemark}
+    ${msgWebCinemark}           Get Resultado Automacao     ${pathWebCinemark}   WebCinemark
 
     ${result}    Set Variable    ${msgWebCinemark}
     Create File    report/test_status.txt    ${result}
@@ -27,9 +27,9 @@ Creat_Report_Body
     RETURN    ${result}
 
 Curl_Request
-    [Arguments]    ${msg}    ${webhook}
+    [Arguments]     ${msg}    ${webhook}
 
-    ${headers}    Create Dictionary    Content-type=application/json
+    ${headers}      Create Dictionary    Content-type=application/json
     ${json_data}    Create Dictionary    text=${msg}
 
     POST    url=${webhook}    headers=${headers}    json=${json_data}    expected_status=200

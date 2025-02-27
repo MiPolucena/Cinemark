@@ -61,7 +61,7 @@ Abrir página de alteracao de senha
 Clicar no Perfil do Usuário
     [Arguments]    ${Perfil}
     Sleep    10
-    Clicar no elemento   xpath=/html/body/div[4]/div[2]/div[2]/button
+    Clicar no elemento   ${Botao_Accepto}
     Clicar no elemento   ${Perfil}
     
 Clicar no elemento

@@ -1,46 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-02-26T14:53:33.256599" rpa="false" schemaversion="5">
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-02-27T16:23:26.291337" rpa="false" schemaversion="5">
 <suite id="s1" name="TestCases" source="C:\Git\Cinemark\src\Selenium\TestCases">
 <suite id="s1-s1" name="F01 LoginTest" source="C:\Git\Cinemark\src\Selenium\TestCases\F01_LoginTest.robot">
 <test id="s1-s1-t1" name="CT01: Efetuar login na página com sucesso" line="9">
 <kw name="Dado que esteja na página home" owner="F01_LoginResources">
 <kw name="Abrir página home" owner="CommonsKeywords">
 <kw name="Disable Request Warning" owner="Request_Warning">
-<status status="PASS" start="2025-02-26T14:53:34.223130" elapsed="0.000088"/>
+<status status="PASS" start="2025-02-27T16:23:27.135147" elapsed="0.000105"/>
 </kw>
 <kw name="Get Environment Variables" owner="Get_Envs">
-<msg time="2025-02-26T14:53:34.224261" level="INFO">${ENVS} = {'USER': 'mirian.inacio+3@mblabs.com.br', 'PASSWORD': 'Cinemark123456!', 'BASE_URL': 'https://ar-qa-www-ext.cinemark.com.ar/'}</msg>
+<msg time="2025-02-27T16:23:27.136421" level="INFO">${ENVS} = {'SLACK_INCOMING_WEBHOOK_URL': 'https://hooks.slack.com/services/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', 'USER': 'mirian.inacio+3@mblabs.com.br', 'PASSWORD': 'Cinemark123456!', 'BASE_URL': 'h...</msg>
 <var>${ENVS}</var>
-<status status="PASS" start="2025-02-26T14:53:34.223316" elapsed="0.000980"/>
+<status status="PASS" start="2025-02-27T16:23:27.135371" elapsed="0.001086"/>
 </kw>
 <kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2025-02-26T14:53:34.224570" level="INFO">${ENVS} = {'USER': 'mirian.inacio+3@mblabs.com.br', 'PASSWORD': 'Cinemark123456!', 'BASE_URL': 'https://ar-qa-www-ext.cinemark.com.ar/'}</msg>
+<msg time="2025-02-27T16:23:27.136747" level="INFO">${ENVS} = {'SLACK_INCOMING_WEBHOOK_URL': 'https://hooks.slack.com/services/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', 'USER': 'mirian.inacio+3@mblabs.com.br', 'PASSWORD': 'Cinemark123456!', 'BASE_URL': 'h...</msg>
 <arg>${ENVS}</arg>
 <arg>${ENVS}</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2025-02-26T14:53:34.224407" elapsed="0.000195"/>
+<status status="PASS" start="2025-02-27T16:23:27.136574" elapsed="0.000207"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-02-26T14:53:34.224861" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000001CFEB1A5BE0&gt;</msg>
+<msg time="2025-02-27T16:23:27.137086" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000016D4B455BE0&gt;</msg>
 <var>${options}</var>
 <arg>selenium.webdriver.ChromeOptions()</arg>
 <arg>selenium.webdriver</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-02-26T14:53:34.224682" elapsed="0.000199"/>
+<status status="PASS" start="2025-02-27T16:23:27.136869" elapsed="0.000247"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-02-26T14:53:34.225100" level="INFO">${prefs} = {'profile.default_content_setting_values.media_stream_mic': 1, 'profile.default_content_setting_values.media_stream_camera': 1, 'profile.default_content_setting_values.geolocation': 1, 'profile.defaul...</msg>
+<msg time="2025-02-27T16:23:27.137351" level="INFO">${prefs} = {'profile.default_content_setting_values.media_stream_mic': 1, 'profile.default_content_setting_values.media_stream_camera': 1, 'profile.default_content_setting_values.geolocation': 1, 'profile.defaul...</msg>
 <var>${prefs}</var>
 <arg>{'profile.default_content_setting_values.media_stream_mic': 1, 'profile.default_content_setting_values.media_stream_camera': 1, 'profile.default_content_setting_values.geolocation': 1, 'profile.default_content_setting_values.notifications': 1}</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-02-26T14:53:34.224965" elapsed="0.000156"/>
+<status status="PASS" start="2025-02-27T16:23:27.137222" elapsed="0.000165"/>
 </kw>
 <kw name="Call Method" owner="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>--disable-infobars</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2025-02-26T14:53:34.225201" elapsed="0.000088"/>
+<status status="PASS" start="2025-02-27T16:23:27.137468" elapsed="0.000108"/>
 </kw>
 <kw name="Call Method" owner="BuiltIn">
 <arg>${options}</arg>
@@ -48,36 +48,36 @@
 <arg>prefs</arg>
 <arg>${prefs}</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2025-02-26T14:53:34.225360" elapsed="0.000091"/>
+<status status="PASS" start="2025-02-27T16:23:27.137655" elapsed="0.000092"/>
 </kw>
 <kw name="Create Webdriver" owner="SeleniumLibrary">
-<msg time="2025-02-26T14:53:34.225660" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg time="2025-02-27T16:23:27.138004" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
 <arg>Chrome</arg>
 <arg>options=${options}</arg>
 <doc>Creates an instance of Selenium WebDriver.</doc>
-<status status="PASS" start="2025-02-26T14:53:34.225531" elapsed="2.255130"/>
+<status status="PASS" start="2025-02-27T16:23:27.137850" elapsed="1.388570"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-02-26T14:53:36.480924" elapsed="0.036922"/>
+<status status="PASS" start="2025-02-27T16:23:28.526600" elapsed="0.021123"/>
 </kw>
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2025-02-26T14:53:36.519030" level="INFO">Opening url 'https://ar-qa-www-ext.cinemark.com.ar/'</msg>
+<msg time="2025-02-27T16:23:28.548489" level="INFO">Opening url 'https://ar-qa-www-ext.cinemark.com.ar/'</msg>
 <arg>${ENVS['BASE_URL']}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2025-02-26T14:53:36.518141" elapsed="4.360085"/>
+<status status="PASS" start="2025-02-27T16:23:28.547933" elapsed="1.582717"/>
 </kw>
-<status status="PASS" start="2025-02-26T14:53:34.222625" elapsed="6.655724"/>
+<status status="PASS" start="2025-02-27T16:23:27.134595" elapsed="2.996236"/>
 </kw>
-<status status="PASS" start="2025-02-26T14:53:34.222350" elapsed="6.656051"/>
+<status status="PASS" start="2025-02-27T16:23:27.134310" elapsed="2.996620"/>
 </kw>
 <kw name="Quando clicar no perfil do usuário" owner="F01_LoginResources">
 <kw name="Clicar no Perfil do Usuário" owner="CommonsKeywords">
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-02-26T14:53:50.880146" level="INFO">Slept 10 seconds.</msg>
+<msg time="2025-02-27T16:23:40.132746" level="INFO">Slept 10 seconds.</msg>
 <arg>10</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-02-26T14:53:40.879526" elapsed="10.000850"/>
+<status status="PASS" start="2025-02-27T16:23:30.132139" elapsed="10.000897"/>
 </kw>
 <kw name="Clicar no elemento" owner="CommonsKeywords">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
@@ -85,16 +85,16 @@
 <arg>timeout=10</arg>
 <arg>error=Elemento ${ELEMENT} não foi encontrado durante a execução do caso de teste: ${TEST_NAME}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-02-26T14:53:50.886767" elapsed="0.056753"/>
+<status status="PASS" start="2025-02-27T16:23:40.139694" elapsed="0.034639"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-02-26T14:53:50.944060" level="INFO">Clicking element 'xpath=/html/body/div[4]/div[2]/div[2]/button'.</msg>
+<msg time="2025-02-27T16:23:40.174699" level="INFO">Clicking element 'xpath=/html/body/div[4]/div[2]/div[2]/button'.</msg>
 <arg>${ELEMENT}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-26T14:53:50.943773" elapsed="0.062833"/>
+<status status="PASS" start="2025-02-27T16:23:40.174506" elapsed="0.057622"/>
 </kw>
-<arg>xpath=/html/body/div[4]/div[2]/div[2]/button</arg>
-<status status="PASS" start="2025-02-26T14:53:50.880797" elapsed="0.125918"/>
+<arg>${Botao_Accepto}</arg>
+<status status="PASS" start="2025-02-27T16:23:40.133626" elapsed="0.098606"/>
 </kw>
 <kw name="Clicar no elemento" owner="CommonsKeywords">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
@@ -102,21 +102,21 @@
 <arg>timeout=10</arg>
 <arg>error=Elemento ${ELEMENT} não foi encontrado durante a execução do caso de teste: ${TEST_NAME}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-02-26T14:53:51.007288" elapsed="0.016838"/>
+<status status="PASS" start="2025-02-27T16:23:40.232726" elapsed="0.016929"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-02-26T14:53:51.024453" level="INFO">Clicking element 'xpath=//*[@id="cnk-header"]/div[1]/div[1]/div/div[2]/button[3]'.</msg>
+<msg time="2025-02-27T16:23:40.250059" level="INFO">Clicking element 'xpath=//*[@id="cnk-header"]/div[1]/div[1]/div/div[2]/button[3]'.</msg>
 <arg>${ELEMENT}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-26T14:53:51.024284" elapsed="0.139580"/>
+<status status="PASS" start="2025-02-27T16:23:40.249821" elapsed="0.110664"/>
 </kw>
 <arg>${Perfil}</arg>
-<status status="PASS" start="2025-02-26T14:53:51.006889" elapsed="0.157090"/>
+<status status="PASS" start="2025-02-27T16:23:40.232392" elapsed="0.128187"/>
 </kw>
 <arg>${Perfil}</arg>
-<status status="PASS" start="2025-02-26T14:53:40.879195" elapsed="10.284836"/>
+<status status="PASS" start="2025-02-27T16:23:30.131782" elapsed="10.228842"/>
 </kw>
-<status status="PASS" start="2025-02-26T14:53:40.878791" elapsed="10.285290"/>
+<status status="PASS" start="2025-02-27T16:23:30.131349" elapsed="10.229314"/>
 </kw>
 <kw name="E informar usuário e senha para efetuar o login" owner="F01_LoginResources">
 <kw name="Iniciar login com usuário e senha válidos" owner="CommonsKeywords">
@@ -125,36 +125,36 @@
 <arg>${FIELD}</arg>
 <arg>error=Elemento ${FIELD} não foi encontrado durante a execução do caso de teste: ${TEST_NAME}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-02-26T14:53:51.165179" elapsed="0.020534"/>
+<status status="PASS" start="2025-02-27T16:23:40.361938" elapsed="0.018756"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-02-26T14:53:51.186686" level="INFO">Typing text 'mirian.inacio+3@mblabs.com.br' into text field 'xpath=//*[@id="email"]'.</msg>
+<msg time="2025-02-27T16:23:40.381290" level="INFO">Typing text 'mirian.inacio+3@mblabs.com.br' into text field 'xpath=//*[@id="email"]'.</msg>
 <arg>${FIELD}</arg>
 <arg>${Text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-26T14:53:51.186082" elapsed="0.163333"/>
+<status status="PASS" start="2025-02-27T16:23:40.380939" elapsed="0.173082"/>
 </kw>
 <arg>${Input_Usuario}</arg>
 <arg>mirian.inacio+3@mblabs.com.br</arg>
-<status status="PASS" start="2025-02-26T14:53:51.164966" elapsed="0.184585"/>
+<status status="PASS" start="2025-02-27T16:23:40.361696" elapsed="0.192483"/>
 </kw>
 <kw name="Inserir texto" owner="CommonsKeywords">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${FIELD}</arg>
 <arg>error=Elemento ${FIELD} não foi encontrado durante a execução do caso de teste: ${TEST_NAME}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-02-26T14:53:51.350058" elapsed="0.024605"/>
+<status status="PASS" start="2025-02-27T16:23:40.554816" elapsed="0.012236"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-02-26T14:53:51.375469" level="INFO">Typing text 'Cinemark123456!' into text field 'xpath=//*[@id="password"]'.</msg>
+<msg time="2025-02-27T16:23:40.567627" level="INFO">Typing text 'Cinemark123456!' into text field 'xpath=//*[@id="password"]'.</msg>
 <arg>${FIELD}</arg>
 <arg>${Text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-26T14:53:51.375105" elapsed="0.111510"/>
+<status status="PASS" start="2025-02-27T16:23:40.567420" elapsed="0.097659"/>
 </kw>
 <arg>${Input_Senha}</arg>
 <arg>Cinemark123456!</arg>
-<status status="PASS" start="2025-02-26T14:53:51.349730" elapsed="0.136995"/>
+<status status="PASS" start="2025-02-27T16:23:40.554424" elapsed="0.110755"/>
 </kw>
 <kw name="Clicar no elemento" owner="CommonsKeywords">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
@@ -162,76 +162,76 @@
 <arg>timeout=10</arg>
 <arg>error=Elemento ${ELEMENT} não foi encontrado durante a execução do caso de teste: ${TEST_NAME}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-02-26T14:53:51.487249" elapsed="0.012608"/>
+<status status="PASS" start="2025-02-27T16:23:40.665571" elapsed="0.011945"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-02-26T14:53:51.500220" level="INFO">Clicking element 'xpath=/html/body/div[4]/div[3]/div[2]/form/div[2]/button[1]'.</msg>
+<msg time="2025-02-27T16:23:40.677865" level="INFO">Clicking element 'xpath=/html/body/div[4]/div[3]/div[2]/form/div[2]/button[1]'.</msg>
 <arg>${ELEMENT}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-26T14:53:51.500030" elapsed="0.086646"/>
+<status status="PASS" start="2025-02-27T16:23:40.677682" elapsed="0.078614"/>
 </kw>
 <arg>${Botao_Iniciar_Session}</arg>
-<status status="PASS" start="2025-02-26T14:53:51.486906" elapsed="0.099883"/>
+<status status="PASS" start="2025-02-27T16:23:40.665320" elapsed="0.091079"/>
 </kw>
-<status status="PASS" start="2025-02-26T14:53:51.164802" elapsed="0.422055"/>
+<status status="PASS" start="2025-02-27T16:23:40.361487" elapsed="0.394957"/>
 </kw>
-<status status="PASS" start="2025-02-26T14:53:51.164527" elapsed="0.422385"/>
+<status status="PASS" start="2025-02-27T16:23:40.360955" elapsed="0.395525"/>
 </kw>
 <kw name="Então o login deverá ser executado com sucesso" owner="F01_LoginResources">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${Banner_Tela_Home_Olá}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-02-26T14:53:51.587735" elapsed="0.018220"/>
+<status status="PASS" start="2025-02-27T16:23:40.757456" elapsed="0.015505"/>
 </kw>
-<status status="PASS" start="2025-02-26T14:53:51.587311" elapsed="0.018788"/>
+<status status="PASS" start="2025-02-27T16:23:40.756926" elapsed="0.016171"/>
 </kw>
 <doc>Card-XXX</doc>
 <tag>F01CT01_Login</tag>
-<status status="PASS" start="2025-02-26T14:53:34.221634" elapsed="17.384839"/>
+<status status="PASS" start="2025-02-27T16:23:27.133599" elapsed="13.639819"/>
 </test>
 <doc>Suíte de testes de Validação do login do Perfil do Usuário</doc>
-<status status="PASS" start="2025-02-26T14:53:33.279694" elapsed="18.327440"/>
+<status status="PASS" start="2025-02-27T16:23:26.313101" elapsed="14.460932"/>
 </suite>
 <suite id="s1-s2" name="F02 CreateAccountTest" source="C:\Git\Cinemark\src\Selenium\TestCases\F02_CreateAccountTest.robot">
 <test id="s1-s2-t1" name="CT01: Efetuar criação de conta com sucesso" line="9">
 <kw name="Dado que esteja na página home" owner="F02_CreateAccountResources">
 <kw name="Abrir página home" owner="CommonsKeywords">
 <kw name="Disable Request Warning" owner="Request_Warning">
-<status status="PASS" start="2025-02-26T14:53:51.617449" elapsed="0.000096"/>
+<status status="PASS" start="2025-02-27T16:23:40.782495" elapsed="0.000075"/>
 </kw>
 <kw name="Get Environment Variables" owner="Get_Envs">
-<msg time="2025-02-26T14:53:51.618385" level="INFO">${ENVS} = {'USER': 'mirian.inacio+3@mblabs.com.br', 'PASSWORD': 'Cinemark123456!', 'BASE_URL': 'https://ar-qa-www-ext.cinemark.com.ar/'}</msg>
+<msg time="2025-02-27T16:23:40.783401" level="INFO">${ENVS} = {'SLACK_INCOMING_WEBHOOK_URL': 'https://hooks.slack.com/services/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', 'USER': 'mirian.inacio+3@mblabs.com.br', 'PASSWORD': 'Cinemark123456!', 'BASE_URL': 'h...</msg>
 <var>${ENVS}</var>
-<status status="PASS" start="2025-02-26T14:53:51.617632" elapsed="0.000781"/>
+<status status="PASS" start="2025-02-27T16:23:40.782647" elapsed="0.000783"/>
 </kw>
 <kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2025-02-26T14:53:51.618670" level="INFO">${ENVS} = {'USER': 'mirian.inacio+3@mblabs.com.br', 'PASSWORD': 'Cinemark123456!', 'BASE_URL': 'https://ar-qa-www-ext.cinemark.com.ar/'}</msg>
+<msg time="2025-02-27T16:23:40.783694" level="INFO">${ENVS} = {'SLACK_INCOMING_WEBHOOK_URL': 'https://hooks.slack.com/services/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', 'USER': 'mirian.inacio+3@mblabs.com.br', 'PASSWORD': 'Cinemark123456!', 'BASE_URL': 'h...</msg>
 <arg>${ENVS}</arg>
 <arg>${ENVS}</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2025-02-26T14:53:51.618513" elapsed="0.000187"/>
+<status status="PASS" start="2025-02-27T16:23:40.783536" elapsed="0.000189"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-02-26T14:53:51.618976" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000001CFEB1907D0&gt;</msg>
+<msg time="2025-02-27T16:23:40.783980" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000016D4B4447D0&gt;</msg>
 <var>${options}</var>
 <arg>selenium.webdriver.ChromeOptions()</arg>
 <arg>selenium.webdriver</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-02-26T14:53:51.618781" elapsed="0.000219"/>
+<status status="PASS" start="2025-02-27T16:23:40.783802" elapsed="0.000200"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-02-26T14:53:51.619222" level="INFO">${prefs} = {'profile.default_content_setting_values.media_stream_mic': 1, 'profile.default_content_setting_values.media_stream_camera': 1, 'profile.default_content_setting_values.geolocation': 1, 'profile.defaul...</msg>
+<msg time="2025-02-27T16:23:40.784211" level="INFO">${prefs} = {'profile.default_content_setting_values.media_stream_mic': 1, 'profile.default_content_setting_values.media_stream_camera': 1, 'profile.default_content_setting_values.geolocation': 1, 'profile.defaul...</msg>
 <var>${prefs}</var>
 <arg>{'profile.default_content_setting_values.media_stream_mic': 1, 'profile.default_content_setting_values.media_stream_camera': 1, 'profile.default_content_setting_values.geolocation': 1, 'profile.default_content_setting_values.notifications': 1}</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-02-26T14:53:51.619089" elapsed="0.000154"/>
+<status status="PASS" start="2025-02-27T16:23:40.784083" elapsed="0.000148"/>
 </kw>
 <kw name="Call Method" owner="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>--disable-infobars</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2025-02-26T14:53:51.619318" elapsed="0.000087"/>
+<status status="PASS" start="2025-02-27T16:23:40.784304" elapsed="0.000086"/>
 </kw>
 <kw name="Call Method" owner="BuiltIn">
 <arg>${options}</arg>
@@ -239,36 +239,36 @@
 <arg>prefs</arg>
 <arg>${prefs}</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2025-02-26T14:53:51.619474" elapsed="0.000090"/>
+<status status="PASS" start="2025-02-27T16:23:40.784517" elapsed="0.000170"/>
 </kw>
 <kw name="Create Webdriver" owner="SeleniumLibrary">
-<msg time="2025-02-26T14:53:51.619755" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg time="2025-02-27T16:23:40.784938" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
 <arg>Chrome</arg>
 <arg>options=${options}</arg>
 <doc>Creates an instance of Selenium WebDriver.</doc>
-<status status="PASS" start="2025-02-26T14:53:51.619645" elapsed="1.368157"/>
+<status status="PASS" start="2025-02-27T16:23:40.784816" elapsed="1.356302"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-02-26T14:53:52.988086" elapsed="0.035300"/>
+<status status="PASS" start="2025-02-27T16:23:42.141591" elapsed="0.033977"/>
 </kw>
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2025-02-26T14:53:53.024259" level="INFO">Opening url 'https://ar-qa-www-ext.cinemark.com.ar/'</msg>
+<msg time="2025-02-27T16:23:42.176635" level="INFO">Opening url 'https://ar-qa-www-ext.cinemark.com.ar/'</msg>
 <arg>${ENVS['BASE_URL']}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2025-02-26T14:53:53.023576" elapsed="3.942588"/>
+<status status="PASS" start="2025-02-27T16:23:42.175800" elapsed="1.292272"/>
 </kw>
-<status status="PASS" start="2025-02-26T14:53:51.617210" elapsed="5.349125"/>
+<status status="PASS" start="2025-02-27T16:23:40.782332" elapsed="2.685910"/>
 </kw>
-<status status="PASS" start="2025-02-26T14:53:51.616847" elapsed="5.349532"/>
+<status status="PASS" start="2025-02-27T16:23:40.781985" elapsed="2.686334"/>
 </kw>
 <kw name="Quando clicar no perfil do usuário" owner="F02_CreateAccountResources">
 <kw name="Clicar no Perfil do Usuário" owner="CommonsKeywords">
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-02-26T14:54:06.968669" level="INFO">Slept 10 seconds.</msg>
+<msg time="2025-02-27T16:23:53.470373" level="INFO">Slept 10 seconds.</msg>
 <arg>10</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-02-26T14:53:56.967665" elapsed="10.001308"/>
+<status status="PASS" start="2025-02-27T16:23:43.469500" elapsed="10.001125"/>
 </kw>
 <kw name="Clicar no elemento" owner="CommonsKeywords">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
@@ -276,16 +276,16 @@
 <arg>timeout=10</arg>
 <arg>error=Elemento ${ELEMENT} não foi encontrado durante a execução do caso de teste: ${TEST_NAME}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-02-26T14:54:06.969775" elapsed="0.023962"/>
+<status status="PASS" start="2025-02-27T16:23:53.471979" elapsed="0.040580"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-02-26T14:54:06.994288" level="INFO">Clicking element 'xpath=/html/body/div[4]/div[2]/div[2]/button'.</msg>
+<msg time="2025-02-27T16:23:53.512917" level="INFO">Clicking element 'xpath=/html/body/div[4]/div[2]/div[2]/button'.</msg>
 <arg>${ELEMENT}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-26T14:54:06.993981" elapsed="0.061927"/>
+<status status="PASS" start="2025-02-27T16:23:53.512731" elapsed="0.061545"/>
 </kw>
-<arg>xpath=/html/body/div[4]/div[2]/div[2]/button</arg>
-<status status="PASS" start="2025-02-26T14:54:06.969331" elapsed="0.086675"/>
+<arg>${Botao_Accepto}</arg>
+<status status="PASS" start="2025-02-27T16:23:53.471061" elapsed="0.103318"/>
 </kw>
 <kw name="Clicar no elemento" owner="CommonsKeywords">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
@@ -293,21 +293,21 @@
 <arg>timeout=10</arg>
 <arg>error=Elemento ${ELEMENT} não foi encontrado durante a execução do caso de teste: ${TEST_NAME}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-02-26T14:54:07.056559" elapsed="0.018674"/>
+<status status="PASS" start="2025-02-27T16:23:53.574878" elapsed="0.018773"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-02-26T14:54:07.075762" level="INFO">Clicking element 'xpath=//*[@id="cnk-header"]/div[1]/div[1]/div/div[2]/button[3]'.</msg>
+<msg time="2025-02-27T16:23:53.594037" level="INFO">Clicking element 'xpath=//*[@id="cnk-header"]/div[1]/div[1]/div/div[2]/button[3]'.</msg>
 <arg>${ELEMENT}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-26T14:54:07.075547" elapsed="0.138309"/>
+<status status="PASS" start="2025-02-27T16:23:53.593847" elapsed="0.134185"/>
 </kw>
 <arg>${Perfil}</arg>
-<status status="PASS" start="2025-02-26T14:54:07.056202" elapsed="0.157765"/>
+<status status="PASS" start="2025-02-27T16:23:53.574536" elapsed="0.153626"/>
 </kw>
 <arg>${Perfil}</arg>
-<status status="PASS" start="2025-02-26T14:53:56.967325" elapsed="10.246695"/>
+<status status="PASS" start="2025-02-27T16:23:43.469126" elapsed="10.259092"/>
 </kw>
-<status status="PASS" start="2025-02-26T14:53:56.966901" elapsed="10.247166"/>
+<status status="PASS" start="2025-02-27T16:23:43.468703" elapsed="10.259565"/>
 </kw>
 <kw name="E clicar em criar conta" owner="F02_CreateAccountResources">
 <kw name="Clicar no elemento" owner="CommonsKeywords">
@@ -316,16 +316,16 @@
 <arg>timeout=10</arg>
 <arg>error=Elemento ${ELEMENT} não foi encontrado durante a execução do caso de teste: ${TEST_NAME}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-02-26T14:54:07.214959" elapsed="0.231269"/>
+<status status="PASS" start="2025-02-27T16:23:53.729205" elapsed="0.227407"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-02-26T14:54:07.446586" level="INFO">Clicking element 'xpath=/html/body/div[4]/div[3]/div[2]/form/div[2]/button[3]'.</msg>
+<msg time="2025-02-27T16:23:53.957156" level="INFO">Clicking element 'xpath=/html/body/div[4]/div[3]/div[2]/form/div[2]/button[3]'.</msg>
 <arg>${ELEMENT}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-26T14:54:07.446395" elapsed="0.173032"/>
+<status status="PASS" start="2025-02-27T16:23:53.956859" elapsed="0.189755"/>
 </kw>
 <arg>${Botao_Crear_Cuenta}</arg>
-<status status="PASS" start="2025-02-26T14:54:07.214705" elapsed="0.404900"/>
+<status status="PASS" start="2025-02-27T16:23:53.728970" elapsed="0.417761"/>
 </kw>
 <kw name="Clicar no elemento" owner="CommonsKeywords">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
@@ -333,156 +333,156 @@
 <arg>timeout=10</arg>
 <arg>error=Elemento ${ELEMENT} não foi encontrado durante a execução do caso de teste: ${TEST_NAME}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-02-26T14:54:07.620293" elapsed="0.693800"/>
+<status status="PASS" start="2025-02-27T16:23:54.147199" elapsed="0.658390"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-02-26T14:54:08.314520" level="INFO">Clicking element 'xpath=/html/body/div[4]/div[3]/div[2]/div/form/div[1]/div[1]/div/div/div[1]/div/img'.</msg>
+<msg time="2025-02-27T16:23:54.806169" level="INFO">Clicking element 'xpath=/html/body/div[4]/div[3]/div[2]/div/form/div[1]/div[1]/div/div/div[1]/div/img'.</msg>
 <arg>${ELEMENT}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-26T14:54:08.314299" elapsed="0.043829"/>
+<status status="PASS" start="2025-02-27T16:23:54.805849" elapsed="0.109503"/>
 </kw>
 <arg>${Avatar}</arg>
-<status status="PASS" start="2025-02-26T14:54:07.619855" elapsed="0.738375"/>
+<status status="PASS" start="2025-02-27T16:23:54.146900" elapsed="0.768554"/>
 </kw>
 <kw name="Inserir texto" owner="CommonsKeywords">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${FIELD}</arg>
 <arg>error=Elemento ${FIELD} não foi encontrado durante a execução do caso de teste: ${TEST_NAME}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-02-26T14:54:08.358677" elapsed="0.011005"/>
+<status status="PASS" start="2025-02-27T16:23:54.915898" elapsed="0.014114"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-02-26T14:54:08.370034" level="INFO">Typing text 'Mirian Alves' into text field 'xpath=//*[@id="firstName"]'.</msg>
+<msg time="2025-02-27T16:23:54.930569" level="INFO">Typing text 'Mirian Alves' into text field 'xpath=//*[@id="firstName"]'.</msg>
 <arg>${FIELD}</arg>
 <arg>${Text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-26T14:54:08.369840" elapsed="0.085349"/>
+<status status="PASS" start="2025-02-27T16:23:54.930258" elapsed="0.089357"/>
 </kw>
 <arg>${Input_Nome}</arg>
 <arg>Mirian Alves</arg>
-<status status="PASS" start="2025-02-26T14:54:08.358375" elapsed="0.096925"/>
+<status status="PASS" start="2025-02-27T16:23:54.915597" elapsed="0.104117"/>
 </kw>
 <kw name="Inserir texto" owner="CommonsKeywords">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${FIELD}</arg>
 <arg>error=Elemento ${FIELD} não foi encontrado durante a execução do caso de teste: ${TEST_NAME}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-02-26T14:54:08.455767" elapsed="0.015697"/>
+<status status="PASS" start="2025-02-27T16:23:55.020133" elapsed="0.011399"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-02-26T14:54:08.471866" level="INFO">Typing text 'Mirian' into text field 'xpath=//*[@id="lastName"]'.</msg>
+<msg time="2025-02-27T16:23:55.031900" level="INFO">Typing text 'Mirian' into text field 'xpath=//*[@id="lastName"]'.</msg>
 <arg>${FIELD}</arg>
 <arg>${Text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-26T14:54:08.471649" elapsed="0.085777"/>
+<status status="PASS" start="2025-02-27T16:23:55.031694" elapsed="0.089268"/>
 </kw>
 <arg>${Input_Apelido}</arg>
 <arg>Mirian</arg>
-<status status="PASS" start="2025-02-26T14:54:08.455467" elapsed="0.102142"/>
+<status status="PASS" start="2025-02-27T16:23:55.019854" elapsed="0.101220"/>
 </kw>
 <kw name="Inserir texto" owner="CommonsKeywords">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${FIELD}</arg>
 <arg>error=Elemento ${FIELD} não foi encontrado durante a execução do caso de teste: ${TEST_NAME}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-02-26T14:54:08.558319" elapsed="0.013814"/>
+<status status="PASS" start="2025-02-27T16:23:55.121686" elapsed="0.014452"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-02-26T14:54:08.572509" level="INFO">Typing text 'mirian.inacio+37@mblabs.com.br' into text field 'xpath=//*[@id="email"]'.</msg>
+<msg time="2025-02-27T16:23:55.136504" level="INFO">Typing text 'mirian.inacio+37@mblabs.com.br' into text field 'xpath=//*[@id="email"]'.</msg>
 <arg>${FIELD}</arg>
 <arg>${Text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-26T14:54:08.572302" elapsed="0.117601"/>
+<status status="PASS" start="2025-02-27T16:23:55.136298" elapsed="0.110019"/>
 </kw>
 <arg>${Input_Email}</arg>
 <arg>mirian.inacio+37@mblabs.com.br</arg>
-<status status="PASS" start="2025-02-26T14:54:08.557849" elapsed="0.132225"/>
+<status status="PASS" start="2025-02-27T16:23:55.121272" elapsed="0.125158"/>
 </kw>
 <kw name="Inserir texto" owner="CommonsKeywords">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${FIELD}</arg>
 <arg>error=Elemento ${FIELD} não foi encontrado durante a execução do caso de teste: ${TEST_NAME}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-02-26T14:54:08.690553" elapsed="0.013232"/>
+<status status="PASS" start="2025-02-27T16:23:55.246859" elapsed="0.014647"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-02-26T14:54:08.704224" level="INFO">Typing text '10/05/2003' into text field 'xpath=/html/body/div[4]/div[3]/div[2]/div/form/div[2]/div/div[4]/div[1]/div/div/input'.</msg>
+<msg time="2025-02-27T16:23:55.262043" level="INFO">Typing text '10/05/2003' into text field 'xpath=/html/body/div[4]/div[3]/div[2]/div/form/div[2]/div/div[4]/div[1]/div/div/input'.</msg>
 <arg>${FIELD}</arg>
 <arg>${Text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-26T14:54:08.703950" elapsed="0.061600"/>
+<status status="PASS" start="2025-02-27T16:23:55.261769" elapsed="0.061896"/>
 </kw>
 <arg>${Input_DtNascto}</arg>
 <arg>10/05/2003</arg>
-<status status="PASS" start="2025-02-26T14:54:08.690272" elapsed="0.075457"/>
+<status status="PASS" start="2025-02-27T16:23:55.246582" elapsed="0.077216"/>
 </kw>
 <kw name="Inserir texto" owner="CommonsKeywords">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${FIELD}</arg>
 <arg>error=Elemento ${FIELD} não foi encontrado durante a execução do caso de teste: ${TEST_NAME}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-02-26T14:54:08.766484" elapsed="0.019213"/>
+<status status="PASS" start="2025-02-27T16:23:55.324201" elapsed="0.015295"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-02-26T14:54:08.786134" level="INFO">Typing text '41999532254' into text field 'xpath=//*[@id="phoneNumber"]'.</msg>
+<msg time="2025-02-27T16:23:55.339897" level="INFO">Typing text '41999532254' into text field 'xpath=//*[@id="phoneNumber"]'.</msg>
 <arg>${FIELD}</arg>
 <arg>${Text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-26T14:54:08.785890" elapsed="0.086844"/>
+<status status="PASS" start="2025-02-27T16:23:55.339675" elapsed="0.074765"/>
 </kw>
 <arg>${Input_Fone}</arg>
 <arg>41999532254</arg>
-<status status="PASS" start="2025-02-26T14:54:08.765986" elapsed="0.107056"/>
+<status status="PASS" start="2025-02-27T16:23:55.323947" elapsed="0.090589"/>
 </kw>
-<status status="PASS" start="2025-02-26T14:54:07.214448" elapsed="1.658723"/>
+<status status="PASS" start="2025-02-27T16:23:53.728692" elapsed="1.685892"/>
 </kw>
 <doc>Card-XXX</doc>
 <tag>F02CT01_CreateAccount</tag>
-<status status="PASS" start="2025-02-26T14:53:51.616414" elapsed="17.257098"/>
+<status status="PASS" start="2025-02-27T16:23:40.781456" elapsed="14.633384"/>
 </test>
 <doc>Suíte de testes de Validação do login do Perfil do Usuário</doc>
-<status status="PASS" start="2025-02-26T14:53:51.608061" elapsed="17.266287"/>
+<status status="PASS" start="2025-02-27T16:23:40.774822" elapsed="14.640568"/>
 </suite>
 <suite id="s1-s3" name="F03 RecuperacaoSenha" source="C:\Git\Cinemark\src\Selenium\TestCases\F03_RecuperacaoSenha.robot">
 <test id="s1-s3-t1" name="CT01: Efetuar cadastro de recuperação de senha com sucesso" line="9">
 <kw name="Dado que esteja na página home" owner="F03_RecuperacaoSenhaResources">
 <kw name="Abrir página home" owner="CommonsKeywords">
 <kw name="Disable Request Warning" owner="Request_Warning">
-<status status="PASS" start="2025-02-26T14:54:08.885802" elapsed="0.000192"/>
+<status status="PASS" start="2025-02-27T16:23:55.424238" elapsed="0.000080"/>
 </kw>
 <kw name="Get Environment Variables" owner="Get_Envs">
-<msg time="2025-02-26T14:54:08.887268" level="INFO">${ENVS} = {'USER': 'mirian.inacio+3@mblabs.com.br', 'PASSWORD': 'Cinemark123456!', 'BASE_URL': 'https://ar-qa-www-ext.cinemark.com.ar/'}</msg>
+<msg time="2025-02-27T16:23:55.425388" level="INFO">${ENVS} = {'SLACK_INCOMING_WEBHOOK_URL': 'https://hooks.slack.com/services/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', 'USER': 'mirian.inacio+3@mblabs.com.br', 'PASSWORD': 'Cinemark123456!', 'BASE_URL': 'h...</msg>
 <var>${ENVS}</var>
-<status status="PASS" start="2025-02-26T14:54:08.886108" elapsed="0.001220"/>
+<status status="PASS" start="2025-02-27T16:23:55.424405" elapsed="0.001020"/>
 </kw>
 <kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2025-02-26T14:54:08.887746" level="INFO">${ENVS} = {'USER': 'mirian.inacio+3@mblabs.com.br', 'PASSWORD': 'Cinemark123456!', 'BASE_URL': 'https://ar-qa-www-ext.cinemark.com.ar/'}</msg>
+<msg time="2025-02-27T16:23:55.425742" level="INFO">${ENVS} = {'SLACK_INCOMING_WEBHOOK_URL': 'https://hooks.slack.com/services/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', 'USER': 'mirian.inacio+3@mblabs.com.br', 'PASSWORD': 'Cinemark123456!', 'BASE_URL': 'h...</msg>
 <arg>${ENVS}</arg>
 <arg>${ENVS}</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2025-02-26T14:54:08.887476" elapsed="0.000337"/>
+<status status="PASS" start="2025-02-27T16:23:55.425543" elapsed="0.000246"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-02-26T14:54:08.888335" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000001CFEA98A5D0&gt;</msg>
+<msg time="2025-02-27T16:23:55.426222" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000016D4AC7A5D0&gt;</msg>
 <var>${options}</var>
 <arg>selenium.webdriver.ChromeOptions()</arg>
 <arg>selenium.webdriver</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-02-26T14:54:08.887990" elapsed="0.000391"/>
+<status status="PASS" start="2025-02-27T16:23:55.425927" elapsed="0.000330"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-02-26T14:54:08.888721" level="INFO">${prefs} = {'profile.default_content_setting_values.media_stream_mic': 1, 'profile.default_content_setting_values.media_stream_camera': 1, 'profile.default_content_setting_values.geolocation': 1, 'profile.defaul...</msg>
+<msg time="2025-02-27T16:23:55.426563" level="INFO">${prefs} = {'profile.default_content_setting_values.media_stream_mic': 1, 'profile.default_content_setting_values.media_stream_camera': 1, 'profile.default_content_setting_values.geolocation': 1, 'profile.defaul...</msg>
 <var>${prefs}</var>
 <arg>{'profile.default_content_setting_values.media_stream_mic': 1, 'profile.default_content_setting_values.media_stream_camera': 1, 'profile.default_content_setting_values.geolocation': 1, 'profile.default_content_setting_values.notifications': 1}</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-02-26T14:54:08.888533" elapsed="0.000216"/>
+<status status="PASS" start="2025-02-27T16:23:55.426385" elapsed="0.000202"/>
 </kw>
 <kw name="Call Method" owner="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>--disable-infobars</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2025-02-26T14:54:08.888848" elapsed="0.000114"/>
+<status status="PASS" start="2025-02-27T16:23:55.426670" elapsed="0.000097"/>
 </kw>
 <kw name="Call Method" owner="BuiltIn">
 <arg>${options}</arg>
@@ -490,36 +490,36 @@
 <arg>prefs</arg>
 <arg>${prefs}</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2025-02-26T14:54:08.889058" elapsed="0.000122"/>
+<status status="PASS" start="2025-02-27T16:23:55.426845" elapsed="0.000097"/>
 </kw>
 <kw name="Create Webdriver" owner="SeleniumLibrary">
-<msg time="2025-02-26T14:54:08.889588" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg time="2025-02-27T16:23:55.427146" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
 <arg>Chrome</arg>
 <arg>options=${options}</arg>
 <doc>Creates an instance of Selenium WebDriver.</doc>
-<status status="PASS" start="2025-02-26T14:54:08.889291" elapsed="1.362610"/>
+<status status="PASS" start="2025-02-27T16:23:55.427028" elapsed="1.328700"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-02-26T14:54:10.252142" elapsed="0.035148"/>
+<status status="PASS" start="2025-02-27T16:23:56.755919" elapsed="0.038232"/>
 </kw>
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2025-02-26T14:54:10.288493" level="INFO">Opening url 'https://ar-qa-www-ext.cinemark.com.ar/'</msg>
+<msg time="2025-02-27T16:23:56.795162" level="INFO">Opening url 'https://ar-qa-www-ext.cinemark.com.ar/'</msg>
 <arg>${ENVS['BASE_URL']}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2025-02-26T14:54:10.287501" elapsed="3.374127"/>
+<status status="PASS" start="2025-02-27T16:23:56.794415" elapsed="1.472878"/>
 </kw>
-<status status="PASS" start="2025-02-26T14:54:08.885596" elapsed="4.776166"/>
+<status status="PASS" start="2025-02-27T16:23:55.424075" elapsed="2.843347"/>
 </kw>
-<status status="PASS" start="2025-02-26T14:54:08.885257" elapsed="4.776572"/>
+<status status="PASS" start="2025-02-27T16:23:55.423724" elapsed="2.843859"/>
 </kw>
 <kw name="Quando clicar no perfil do usuário" owner="F03_RecuperacaoSenhaResources">
 <kw name="Clicar no Perfil do Usuário" owner="CommonsKeywords">
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-02-26T14:54:23.663684" level="INFO">Slept 10 seconds.</msg>
+<msg time="2025-02-27T16:24:08.269014" level="INFO">Slept 10 seconds.</msg>
 <arg>10</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-02-26T14:54:13.663146" elapsed="10.000846"/>
+<status status="PASS" start="2025-02-27T16:23:58.268641" elapsed="10.000600"/>
 </kw>
 <kw name="Clicar no elemento" owner="CommonsKeywords">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
@@ -527,16 +527,16 @@
 <arg>timeout=10</arg>
 <arg>error=Elemento ${ELEMENT} não foi encontrado durante a execução do caso de teste: ${TEST_NAME}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-02-26T14:54:23.665544" elapsed="0.023104"/>
+<status status="PASS" start="2025-02-27T16:24:08.270370" elapsed="0.032689"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-02-26T14:54:23.689315" level="INFO">Clicking element 'xpath=/html/body/div[4]/div[2]/div[2]/button'.</msg>
+<msg time="2025-02-27T16:24:08.303406" level="INFO">Clicking element 'xpath=/html/body/div[4]/div[2]/div[2]/button'.</msg>
 <arg>${ELEMENT}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-26T14:54:23.688973" elapsed="0.057372"/>
+<status status="PASS" start="2025-02-27T16:24:08.303222" elapsed="0.058057"/>
 </kw>
-<arg>xpath=/html/body/div[4]/div[2]/div[2]/button</arg>
-<status status="PASS" start="2025-02-26T14:54:23.664601" elapsed="0.081841"/>
+<arg>${Botao_Accepto}</arg>
+<status status="PASS" start="2025-02-27T16:24:08.269662" elapsed="0.091809"/>
 </kw>
 <kw name="Clicar no elemento" owner="CommonsKeywords">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
@@ -544,21 +544,21 @@
 <arg>timeout=10</arg>
 <arg>error=Elemento ${ELEMENT} não foi encontrado durante a execução do caso de teste: ${TEST_NAME}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-02-26T14:54:23.746948" elapsed="0.016822"/>
+<status status="PASS" start="2025-02-27T16:24:08.362113" elapsed="0.018983"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-02-26T14:54:23.764318" level="INFO">Clicking element 'xpath=//*[@id="cnk-header"]/div[1]/div[1]/div/div[2]/button[3]'.</msg>
+<msg time="2025-02-27T16:24:08.381696" level="INFO">Clicking element 'xpath=//*[@id="cnk-header"]/div[1]/div[1]/div/div[2]/button[3]'.</msg>
 <arg>${ELEMENT}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-26T14:54:23.764101" elapsed="0.114779"/>
+<status status="PASS" start="2025-02-27T16:24:08.381387" elapsed="0.137972"/>
 </kw>
 <arg>${Perfil}</arg>
-<status status="PASS" start="2025-02-26T14:54:23.746665" elapsed="0.132317"/>
+<status status="PASS" start="2025-02-27T16:24:08.361725" elapsed="0.157736"/>
 </kw>
 <arg>${Perfil}</arg>
-<status status="PASS" start="2025-02-26T14:54:13.662809" elapsed="10.216222"/>
+<status status="PASS" start="2025-02-27T16:23:58.268375" elapsed="10.251133"/>
 </kw>
-<status status="PASS" start="2025-02-26T14:54:13.662375" elapsed="10.216698"/>
+<status status="PASS" start="2025-02-27T16:23:58.267990" elapsed="10.251560"/>
 </kw>
 <kw name="E clicar em Olvidé mi contraseña" owner="F03_RecuperacaoSenhaResources">
 <kw name="Clicar no elemento" owner="CommonsKeywords">
@@ -567,18 +567,18 @@
 <arg>timeout=10</arg>
 <arg>error=Elemento ${ELEMENT} não foi encontrado durante a execução do caso de teste: ${TEST_NAME}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-02-26T14:54:23.879887" elapsed="0.228884"/>
+<status status="PASS" start="2025-02-27T16:24:08.520441" elapsed="0.225078"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-02-26T14:54:24.109123" level="INFO">Clicking element 'xpath=/html/body/div[4]/div[3]/div[2]/form/div[2]/button[2]'.</msg>
+<msg time="2025-02-27T16:24:08.746125" level="INFO">Clicking element 'xpath=/html/body/div[4]/div[3]/div[2]/form/div[2]/button[2]'.</msg>
 <arg>${ELEMENT}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-26T14:54:24.108936" elapsed="0.107421"/>
+<status status="PASS" start="2025-02-27T16:24:08.745775" elapsed="0.113884"/>
 </kw>
 <arg>${Botao_Recupera_Senha}</arg>
-<status status="PASS" start="2025-02-26T14:54:23.879659" elapsed="0.336803"/>
+<status status="PASS" start="2025-02-27T16:24:08.520217" elapsed="0.339546"/>
 </kw>
-<status status="PASS" start="2025-02-26T14:54:23.879361" elapsed="0.337151"/>
+<status status="PASS" start="2025-02-27T16:24:08.519938" elapsed="0.339878"/>
 </kw>
 <kw name="E informar email para recuperar a senha" owner="F03_RecuperacaoSenhaResources">
 <kw name="Inserir texto" owner="CommonsKeywords">
@@ -586,18 +586,18 @@
 <arg>${FIELD}</arg>
 <arg>error=Elemento ${FIELD} não foi encontrado durante a execução do caso de teste: ${TEST_NAME}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-02-26T14:54:24.217415" elapsed="0.024650"/>
+<status status="PASS" start="2025-02-27T16:24:08.860721" elapsed="0.024278"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-02-26T14:54:24.242459" level="INFO">Typing text 'mirian.inacio+3@mblabs.com.br' into text field 'xpath=//*[@id="email"]'.</msg>
+<msg time="2025-02-27T16:24:08.885436" level="INFO">Typing text 'mirian.inacio+3@mblabs.com.br' into text field 'xpath=//*[@id="email"]'.</msg>
 <arg>${FIELD}</arg>
 <arg>${Text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-26T14:54:24.242248" elapsed="0.144852"/>
+<status status="PASS" start="2025-02-27T16:24:08.885224" elapsed="0.149550"/>
 </kw>
 <arg>${Input_Email_Recuperacao}</arg>
 <arg>mirian.inacio+3@mblabs.com.br</arg>
-<status status="PASS" start="2025-02-26T14:54:24.217137" elapsed="0.170077"/>
+<status status="PASS" start="2025-02-27T16:24:08.860493" elapsed="0.174523"/>
 </kw>
 <kw name="Clicar no elemento" owner="CommonsKeywords">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
@@ -605,125 +605,125 @@
 <arg>timeout=10</arg>
 <arg>error=Elemento ${ELEMENT} não foi encontrado durante a execução do caso de teste: ${TEST_NAME}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-02-26T14:54:24.388314" elapsed="0.013393"/>
+<status status="PASS" start="2025-02-27T16:24:09.035446" elapsed="0.011792"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-02-26T14:54:24.402078" level="INFO">Clicking element 'xpath=/html/body/div[4]/div[3]/div[2]/div/form/div[2]/button'.</msg>
+<msg time="2025-02-27T16:24:09.047751" level="INFO">Clicking element 'xpath=/html/body/div[4]/div[3]/div[2]/div/form/div[2]/button'.</msg>
 <arg>${ELEMENT}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-26T14:54:24.401884" elapsed="0.072820"/>
+<status status="PASS" start="2025-02-27T16:24:09.047406" elapsed="0.070830"/>
 </kw>
 <arg>${Botao_Validar_Recupera_Senha}</arg>
-<status status="PASS" start="2025-02-26T14:54:24.387779" elapsed="0.087039"/>
+<status status="PASS" start="2025-02-27T16:24:09.035179" elapsed="0.083169"/>
 </kw>
-<status status="PASS" start="2025-02-26T14:54:24.216877" elapsed="0.258005"/>
+<status status="PASS" start="2025-02-27T16:24:08.860193" elapsed="0.258200"/>
 </kw>
 <kw name="Então deverá exibir mensagem para verificar correio eletrônico" owner="F03_RecuperacaoSenhaResources">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${Banner_Revisa_Email}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-02-26T14:54:24.475621" elapsed="0.018304"/>
+<status status="PASS" start="2025-02-27T16:24:09.119003" elapsed="0.015820"/>
 </kw>
-<status status="PASS" start="2025-02-26T14:54:24.475286" elapsed="0.018750"/>
+<status status="PASS" start="2025-02-27T16:24:09.118726" elapsed="0.016227"/>
 </kw>
 <doc>Card-XXX</doc>
 <tag>F03CT01_RecuperaSenha</tag>
-<status status="PASS" start="2025-02-26T14:54:08.884632" elapsed="15.609745"/>
+<status status="PASS" start="2025-02-27T16:23:55.423278" elapsed="13.711956"/>
 </test>
 <test id="s1-s3-t2" name="CT02: Efetuar cadastro de nova senha com sucesso" line="18">
 <kw name="Dado que esteja na página de alteração de senha" owner="F03_RecuperacaoSenhaResources">
 <kw name="Abrir página de alteracao de senha" owner="CommonsKeywords">
 <kw name="Disable Request Warning" owner="Request_Warning">
-<status status="PASS" start="2025-02-26T14:54:24.495576" elapsed="0.000080"/>
+<status status="PASS" start="2025-02-27T16:24:09.136399" elapsed="0.000096"/>
 </kw>
 <kw name="Get Environment Variables" owner="Get_Envs">
-<msg time="2025-02-26T14:54:24.496568" level="INFO">${ENVS} = {'USER': 'mirian.inacio+3@mblabs.com.br', 'PASSWORD': 'Cinemark123456!', 'BASE_URL': 'https://ar-qa-www-ext.cinemark.com.ar/'}</msg>
+<msg time="2025-02-27T16:24:09.137370" level="INFO">${ENVS} = {'SLACK_INCOMING_WEBHOOK_URL': 'https://hooks.slack.com/services/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', 'USER': 'mirian.inacio+3@mblabs.com.br', 'PASSWORD': 'Cinemark123456!', 'BASE_URL': 'h...</msg>
 <var>${ENVS}</var>
-<status status="PASS" start="2025-02-26T14:54:24.495744" elapsed="0.000856"/>
+<status status="PASS" start="2025-02-27T16:24:09.136569" elapsed="0.000829"/>
 </kw>
 <kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2025-02-26T14:54:24.496924" level="INFO">${ENVS} = {'USER': 'mirian.inacio+3@mblabs.com.br', 'PASSWORD': 'Cinemark123456!', 'BASE_URL': 'https://ar-qa-www-ext.cinemark.com.ar/'}</msg>
+<msg time="2025-02-27T16:24:09.137787" level="INFO">${ENVS} = {'SLACK_INCOMING_WEBHOOK_URL': 'https://hooks.slack.com/services/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', 'USER': 'mirian.inacio+3@mblabs.com.br', 'PASSWORD': 'Cinemark123456!', 'BASE_URL': 'h...</msg>
 <arg>${ENVS}</arg>
 <arg>${ENVS}</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2025-02-26T14:54:24.496724" elapsed="0.000239"/>
+<status status="PASS" start="2025-02-27T16:24:09.137548" elapsed="0.000292"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-02-26T14:54:24.497288" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000001CFEB199E00&gt;</msg>
+<msg time="2025-02-27T16:24:09.138259" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000016D4B449E00&gt;</msg>
 <var>${options}</var>
 <arg>selenium.webdriver.ChromeOptions()</arg>
 <arg>selenium.webdriver</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-02-26T14:54:24.497070" elapsed="0.000247"/>
+<status status="PASS" start="2025-02-27T16:24:09.137960" elapsed="0.000323"/>
 </kw>
 <kw name="Create Webdriver" owner="SeleniumLibrary">
-<msg time="2025-02-26T14:54:24.497583" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg time="2025-02-27T16:24:09.138538" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
 <arg>Chrome</arg>
 <arg>options=${options}</arg>
 <doc>Creates an instance of Selenium WebDriver.</doc>
-<status status="PASS" start="2025-02-26T14:54:24.497446" elapsed="1.355387"/>
+<status status="PASS" start="2025-02-27T16:24:09.138385" elapsed="1.387480"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-02-26T14:54:25.853104" elapsed="0.037203"/>
+<status status="PASS" start="2025-02-27T16:24:10.526149" elapsed="0.048915"/>
 </kw>
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2025-02-26T14:54:25.891207" level="INFO">Opening url 'https://ar-qa-www-ext.cinemark.com.ar/'</msg>
+<msg time="2025-02-27T16:24:10.576277" level="INFO">Opening url 'https://ar-qa-www-ext.cinemark.com.ar/'</msg>
 <arg>${ENVS['BASE_URL']}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2025-02-26T14:54:25.890504" elapsed="3.623122"/>
+<status status="PASS" start="2025-02-27T16:24:10.575333" elapsed="1.582339"/>
 </kw>
-<status status="PASS" start="2025-02-26T14:54:24.495417" elapsed="5.018305"/>
+<status status="PASS" start="2025-02-27T16:24:09.136260" elapsed="3.021587"/>
 </kw>
-<status status="PASS" start="2025-02-26T14:54:24.495186" elapsed="5.018590"/>
+<status status="PASS" start="2025-02-27T16:24:09.136054" elapsed="3.021884"/>
 </kw>
 <doc>Card-XXX</doc>
 <tag>F03CT02_CadastraSenha</tag>
-<status status="PASS" start="2025-02-26T14:54:24.494805" elapsed="5.019326"/>
+<status status="PASS" start="2025-02-27T16:24:09.135714" elapsed="3.023102"/>
 </test>
 <doc>Suíte de testes de Validação do login do Perfil do Usuário</doc>
-<status status="PASS" start="2025-02-26T14:54:08.875628" elapsed="20.639230"/>
+<status status="PASS" start="2025-02-27T16:23:55.416158" elapsed="16.743964"/>
 </suite>
 <suite id="s1-s4" name="F04 AlteraCadUsuario" source="C:\Git\Cinemark\src\Selenium\TestCases\F04_AlteraCadUsuario.robot">
 <test id="s1-s4-t1" name="CT01: Efetuar alteração no cadastro do usuário" line="9">
 <kw name="Dado que esteja na página home" owner="F04_AlteraCadUsuarioResources">
 <kw name="Abrir página home" owner="CommonsKeywords">
 <kw name="Disable Request Warning" owner="Request_Warning">
-<status status="PASS" start="2025-02-26T14:54:29.527471" elapsed="0.000096"/>
+<status status="PASS" start="2025-02-27T16:24:12.175449" elapsed="0.000165"/>
 </kw>
 <kw name="Get Environment Variables" owner="Get_Envs">
-<msg time="2025-02-26T14:54:29.528434" level="INFO">${ENVS} = {'USER': 'mirian.inacio+3@mblabs.com.br', 'PASSWORD': 'Cinemark123456!', 'BASE_URL': 'https://ar-qa-www-ext.cinemark.com.ar/'}</msg>
+<msg time="2025-02-27T16:24:12.177318" level="INFO">${ENVS} = {'SLACK_INCOMING_WEBHOOK_URL': 'https://hooks.slack.com/services/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', 'USER': 'mirian.inacio+3@mblabs.com.br', 'PASSWORD': 'Cinemark123456!', 'BASE_URL': 'h...</msg>
 <var>${ENVS}</var>
-<status status="PASS" start="2025-02-26T14:54:29.527658" elapsed="0.000808"/>
+<status status="PASS" start="2025-02-27T16:24:12.175790" elapsed="0.001592"/>
 </kw>
 <kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2025-02-26T14:54:29.528751" level="INFO">${ENVS} = {'USER': 'mirian.inacio+3@mblabs.com.br', 'PASSWORD': 'Cinemark123456!', 'BASE_URL': 'https://ar-qa-www-ext.cinemark.com.ar/'}</msg>
+<msg time="2025-02-27T16:24:12.177931" level="INFO">${ENVS} = {'SLACK_INCOMING_WEBHOOK_URL': 'https://hooks.slack.com/services/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', 'USER': 'mirian.inacio+3@mblabs.com.br', 'PASSWORD': 'Cinemark123456!', 'BASE_URL': 'h...</msg>
 <arg>${ENVS}</arg>
 <arg>${ENVS}</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2025-02-26T14:54:29.528584" elapsed="0.000202"/>
+<status status="PASS" start="2025-02-27T16:24:12.177597" elapsed="0.000452"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-02-26T14:54:29.529086" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000001CFEB199810&gt;</msg>
+<msg time="2025-02-27T16:24:12.178950" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000016D4B449810&gt;</msg>
 <var>${options}</var>
 <arg>selenium.webdriver.ChromeOptions()</arg>
 <arg>selenium.webdriver</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-02-26T14:54:29.528880" elapsed="0.000231"/>
+<status status="PASS" start="2025-02-27T16:24:12.178347" elapsed="0.000664"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-02-26T14:54:29.529350" level="INFO">${prefs} = {'profile.default_content_setting_values.media_stream_mic': 1, 'profile.default_content_setting_values.media_stream_camera': 1, 'profile.default_content_setting_values.geolocation': 1, 'profile.defaul...</msg>
+<msg time="2025-02-27T16:24:12.179505" level="INFO">${prefs} = {'profile.default_content_setting_values.media_stream_mic': 1, 'profile.default_content_setting_values.media_stream_camera': 1, 'profile.default_content_setting_values.geolocation': 1, 'profile.defaul...</msg>
 <var>${prefs}</var>
 <arg>{'profile.default_content_setting_values.media_stream_mic': 1, 'profile.default_content_setting_values.media_stream_camera': 1, 'profile.default_content_setting_values.geolocation': 1, 'profile.default_content_setting_values.notifications': 1}</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-02-26T14:54:29.529206" elapsed="0.000167"/>
+<status status="PASS" start="2025-02-27T16:24:12.179227" elapsed="0.000319"/>
 </kw>
 <kw name="Call Method" owner="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>--disable-infobars</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2025-02-26T14:54:29.529470" elapsed="0.000115"/>
+<status status="PASS" start="2025-02-27T16:24:12.179712" elapsed="0.000187"/>
 </kw>
 <kw name="Call Method" owner="BuiltIn">
 <arg>${options}</arg>
@@ -731,36 +731,36 @@
 <arg>prefs</arg>
 <arg>${prefs}</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2025-02-26T14:54:29.529682" elapsed="0.000114"/>
+<status status="PASS" start="2025-02-27T16:24:12.180056" elapsed="0.000201"/>
 </kw>
 <kw name="Create Webdriver" owner="SeleniumLibrary">
-<msg time="2025-02-26T14:54:29.530014" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg time="2025-02-27T16:24:12.181312" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
 <arg>Chrome</arg>
 <arg>options=${options}</arg>
 <doc>Creates an instance of Selenium WebDriver.</doc>
-<status status="PASS" start="2025-02-26T14:54:29.529892" elapsed="1.362646"/>
+<status status="PASS" start="2025-02-27T16:24:12.181044" elapsed="1.629011"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-02-26T14:54:30.892848" elapsed="0.037529"/>
+<status status="PASS" start="2025-02-27T16:24:13.810375" elapsed="0.118110"/>
 </kw>
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2025-02-26T14:54:30.931210" level="INFO">Opening url 'https://ar-qa-www-ext.cinemark.com.ar/'</msg>
+<msg time="2025-02-27T16:24:13.929718" level="INFO">Opening url 'https://ar-qa-www-ext.cinemark.com.ar/'</msg>
 <arg>${ENVS['BASE_URL']}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2025-02-26T14:54:30.930576" elapsed="3.750053"/>
+<status status="PASS" start="2025-02-27T16:24:13.928767" elapsed="1.272336"/>
 </kw>
-<status status="PASS" start="2025-02-26T14:54:29.527254" elapsed="5.153507"/>
+<status status="PASS" start="2025-02-27T16:24:12.175160" elapsed="3.026138"/>
 </kw>
-<status status="PASS" start="2025-02-26T14:54:29.526803" elapsed="5.154006"/>
+<status status="PASS" start="2025-02-27T16:24:12.174746" elapsed="3.026655"/>
 </kw>
 <kw name="Quando efetuar o login com usuário e senha válidos" owner="F04_AlteraCadUsuarioResources">
 <kw name="Clicar no Perfil do Usuário" owner="CommonsKeywords">
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-02-26T14:54:44.682293" level="INFO">Slept 10 seconds.</msg>
+<msg time="2025-02-27T16:24:25.203843" level="INFO">Slept 10 seconds.</msg>
 <arg>10</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-02-26T14:54:34.681586" elapsed="10.000944"/>
+<status status="PASS" start="2025-02-27T16:24:15.203081" elapsed="10.000890"/>
 </kw>
 <kw name="Clicar no elemento" owner="CommonsKeywords">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
@@ -768,16 +768,16 @@
 <arg>timeout=10</arg>
 <arg>error=Elemento ${ELEMENT} não foi encontrado durante a execução do caso de teste: ${TEST_NAME}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-02-26T14:54:44.683435" elapsed="0.030370"/>
+<status status="PASS" start="2025-02-27T16:24:25.204680" elapsed="0.035590"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-02-26T14:54:44.714588" level="INFO">Clicking element 'xpath=/html/body/div[4]/div[2]/div[2]/button'.</msg>
+<msg time="2025-02-27T16:24:25.240873" level="INFO">Clicking element 'xpath=/html/body/div[4]/div[2]/div[2]/button'.</msg>
 <arg>${ELEMENT}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-26T14:54:44.714200" elapsed="0.065424"/>
+<status status="PASS" start="2025-02-27T16:24:25.240543" elapsed="0.075079"/>
 </kw>
-<arg>xpath=/html/body/div[4]/div[2]/div[2]/button</arg>
-<status status="PASS" start="2025-02-26T14:54:44.682971" elapsed="0.096774"/>
+<arg>${Botao_Accepto}</arg>
+<status status="PASS" start="2025-02-27T16:24:25.204266" elapsed="0.111484"/>
 </kw>
 <kw name="Clicar no elemento" owner="CommonsKeywords">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
@@ -785,19 +785,19 @@
 <arg>timeout=10</arg>
 <arg>error=Elemento ${ELEMENT} não foi encontrado durante a execução do caso de teste: ${TEST_NAME}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-02-26T14:54:44.780276" elapsed="0.018041"/>
+<status status="PASS" start="2025-02-27T16:24:25.316255" elapsed="0.015139"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-02-26T14:54:44.798668" level="INFO">Clicking element 'xpath=//*[@id="cnk-header"]/div[1]/div[1]/div/div[2]/button[3]'.</msg>
+<msg time="2025-02-27T16:24:25.331875" level="INFO">Clicking element 'xpath=//*[@id="cnk-header"]/div[1]/div[1]/div/div[2]/button[3]'.</msg>
 <arg>${ELEMENT}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-26T14:54:44.798482" elapsed="0.118089"/>
+<status status="PASS" start="2025-02-27T16:24:25.331654" elapsed="0.142503"/>
 </kw>
 <arg>${Perfil}</arg>
-<status status="PASS" start="2025-02-26T14:54:44.779923" elapsed="0.136788"/>
+<status status="PASS" start="2025-02-27T16:24:25.315924" elapsed="0.158418"/>
 </kw>
 <arg>${Perfil}</arg>
-<status status="PASS" start="2025-02-26T14:54:34.681381" elapsed="10.235383"/>
+<status status="PASS" start="2025-02-27T16:24:15.202577" elapsed="10.271854"/>
 </kw>
 <kw name="Iniciar login com usuário e senha válidos" owner="CommonsKeywords">
 <kw name="Inserir texto" owner="CommonsKeywords">
@@ -805,36 +805,36 @@
 <arg>${FIELD}</arg>
 <arg>error=Elemento ${FIELD} não foi encontrado durante a execução do caso de teste: ${TEST_NAME}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-02-26T14:54:44.917444" elapsed="0.022737"/>
+<status status="PASS" start="2025-02-27T16:24:25.475292" elapsed="0.032167"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-02-26T14:54:44.940713" level="INFO">Typing text 'mirian.inacio+3@mblabs.com.br' into text field 'xpath=//*[@id="email"]'.</msg>
+<msg time="2025-02-27T16:24:25.508068" level="INFO">Typing text 'mirian.inacio+3@mblabs.com.br' into text field 'xpath=//*[@id="email"]'.</msg>
 <arg>${FIELD}</arg>
 <arg>${Text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-26T14:54:44.940374" elapsed="0.207028"/>
+<status status="PASS" start="2025-02-27T16:24:25.507734" elapsed="0.178418"/>
 </kw>
 <arg>${Input_Usuario}</arg>
 <arg>mirian.inacio+3@mblabs.com.br</arg>
-<status status="PASS" start="2025-02-26T14:54:44.917212" elapsed="0.230359"/>
+<status status="PASS" start="2025-02-27T16:24:25.475036" elapsed="0.211291"/>
 </kw>
 <kw name="Inserir texto" owner="CommonsKeywords">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${FIELD}</arg>
 <arg>error=Elemento ${FIELD} não foi encontrado durante a execução do caso de teste: ${TEST_NAME}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-02-26T14:54:45.148255" elapsed="0.019498"/>
+<status status="PASS" start="2025-02-27T16:24:25.687010" elapsed="0.016531"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-02-26T14:54:45.168473" level="INFO">Typing text 'Cinemark123456!' into text field 'xpath=//*[@id="password"]'.</msg>
+<msg time="2025-02-27T16:24:25.703913" level="INFO">Typing text 'Cinemark123456!' into text field 'xpath=//*[@id="password"]'.</msg>
 <arg>${FIELD}</arg>
 <arg>${Text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-26T14:54:45.167943" elapsed="0.117374"/>
+<status status="PASS" start="2025-02-27T16:24:25.703710" elapsed="0.128515"/>
 </kw>
 <arg>${Input_Senha}</arg>
 <arg>Cinemark123456!</arg>
-<status status="PASS" start="2025-02-26T14:54:45.147822" elapsed="0.137690"/>
+<status status="PASS" start="2025-02-27T16:24:25.686572" elapsed="0.145765"/>
 </kw>
 <kw name="Clicar no elemento" owner="CommonsKeywords">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
@@ -842,18 +842,18 @@
 <arg>timeout=10</arg>
 <arg>error=Elemento ${ELEMENT} não foi encontrado durante a execução do caso de teste: ${TEST_NAME}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-02-26T14:54:45.286296" elapsed="0.014484"/>
+<status status="PASS" start="2025-02-27T16:24:25.832810" elapsed="0.017337"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-02-26T14:54:45.301176" level="INFO">Clicking element 'xpath=/html/body/div[4]/div[3]/div[2]/form/div[2]/button[1]'.</msg>
+<msg time="2025-02-27T16:24:25.850823" level="INFO">Clicking element 'xpath=/html/body/div[4]/div[3]/div[2]/form/div[2]/button[1]'.</msg>
 <arg>${ELEMENT}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-26T14:54:45.300969" elapsed="0.096394"/>
+<status status="PASS" start="2025-02-27T16:24:25.850468" elapsed="0.105275"/>
 </kw>
 <arg>${Botao_Iniciar_Session}</arg>
-<status status="PASS" start="2025-02-26T14:54:45.285781" elapsed="0.111694"/>
+<status status="PASS" start="2025-02-27T16:24:25.832510" elapsed="0.123433"/>
 </kw>
-<status status="PASS" start="2025-02-26T14:54:44.916968" elapsed="0.480559"/>
+<status status="PASS" start="2025-02-27T16:24:25.474697" elapsed="0.481326"/>
 </kw>
 <kw name="Clicar no elemento" owner="CommonsKeywords">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
@@ -861,18 +861,18 @@
 <arg>timeout=10</arg>
 <arg>error=Elemento ${ELEMENT} não foi encontrado durante a execução do caso de teste: ${TEST_NAME}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-02-26T14:54:45.397968" elapsed="2.219450"/>
+<status status="PASS" start="2025-02-27T16:24:25.956511" elapsed="2.392148"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-02-26T14:54:47.617912" level="INFO">Clicking element 'xpath=/html/body/div[4]/div[3]/div/div/button'.</msg>
+<msg time="2025-02-27T16:24:28.349252" level="INFO">Clicking element 'xpath=/html/body/div[4]/div[3]/div/div/button'.</msg>
 <arg>${ELEMENT}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-26T14:54:47.617605" elapsed="0.086668"/>
+<status status="PASS" start="2025-02-27T16:24:28.348949" elapsed="0.124528"/>
 </kw>
 <arg>${Botao_Fechar_Login}</arg>
-<status status="PASS" start="2025-02-26T14:54:45.397688" elapsed="2.306748"/>
+<status status="PASS" start="2025-02-27T16:24:25.956223" elapsed="2.517356"/>
 </kw>
-<status status="PASS" start="2025-02-26T14:54:34.681113" elapsed="13.023401"/>
+<status status="PASS" start="2025-02-27T16:24:15.202112" elapsed="13.271518"/>
 </kw>
 <kw name="E acessar o perfil para fazer alteração de cadastro" owner="F04_AlteraCadUsuarioResources">
 <kw name="Clicar no elemento" owner="CommonsKeywords">
@@ -881,68 +881,80 @@
 <arg>timeout=10</arg>
 <arg>error=Elemento ${ELEMENT} não foi encontrado durante a execução do caso de teste: ${TEST_NAME}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-02-26T14:54:47.705417" elapsed="0.020881"/>
+<status status="PASS" start="2025-02-27T16:24:28.474386" elapsed="0.078440"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-02-26T14:54:47.726955" level="INFO">Clicking element 'xpath=//*[@id="cnk-header"]/div[1]/div[1]/div/div[2]/button[3]/div/div/img'.</msg>
+<msg time="2025-02-27T16:24:28.553179" level="INFO">Clicking element 'xpath=//*[@id="cnk-header"]/div[1]/div[1]/div/div[2]/button[3]/div/div/img'.</msg>
 <arg>${ELEMENT}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-26T14:54:47.726594" elapsed="0.301010"/>
+<status status="PASS" start="2025-02-27T16:24:28.552995" elapsed="0.249242"/>
 </kw>
 <arg>${Perfil_Cadastrado}</arg>
-<status status="PASS" start="2025-02-26T14:54:47.705215" elapsed="0.322519"/>
+<status status="PASS" start="2025-02-27T16:24:28.474170" elapsed="0.328238"/>
 </kw>
 <kw name="Clicar no elemento" owner="CommonsKeywords">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<msg time="2025-02-26T14:54:58.247688" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2025-02-26T14:54:58.247943" level="FAIL">Elemento xpath=/html/body/div[4]/div[3]/div[2]/div/div[5]/div/div[3]/button não foi encontrado durante a execução do caso de teste: CT01: Efetuar alteração no cadastro do usuário</msg>
 <arg>${ELEMENT}</arg>
 <arg>timeout=10</arg>
 <arg>error=Elemento ${ELEMENT} não foi encontrado durante a execução do caso de teste: ${TEST_NAME}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="FAIL" start="2025-02-26T14:54:48.028108" elapsed="10.242240">Elemento xpath=/html/body/div[4]/div[3]/div[2]/div/div[5]/div/div[3]/button não foi encontrado durante a execução do caso de teste: CT01: Efetuar alteração no cadastro do usuário</status>
+<status status="PASS" start="2025-02-27T16:24:28.802995" elapsed="2.557483"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-27T16:24:31.361195" level="INFO">Clicking element 'xpath=/html/body/div[4]/div[3]/div[2]/div/div[5]/div/div[3]/button'.</msg>
 <arg>${ELEMENT}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2025-02-26T14:54:58.270591" elapsed="0.000044"/>
+<status status="PASS" start="2025-02-27T16:24:31.360775" elapsed="0.128430"/>
 </kw>
 <arg>${Botao_Cuenta}</arg>
-<status status="FAIL" start="2025-02-26T14:54:48.027880" elapsed="10.242903">Elemento xpath=/html/body/div[4]/div[3]/div[2]/div/div[5]/div/div[3]/button não foi encontrado durante a execução do caso de teste: CT01: Efetuar alteração no cadastro do usuário</status>
+<status status="PASS" start="2025-02-27T16:24:28.802644" elapsed="2.686679"/>
 </kw>
 <kw name="Inserir texto" owner="CommonsKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${FIELD}</arg>
+<arg>error=Elemento ${FIELD} não foi encontrado durante a execução do caso de teste: ${TEST_NAME}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-27T16:24:31.489772" elapsed="0.018178"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-27T16:24:31.508309" level="INFO">Typing text 'Mii' into text field 'xpath=//*[@id="lastName"]'.</msg>
+<arg>${FIELD}</arg>
+<arg>${Text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-27T16:24:31.508113" elapsed="0.059925"/>
+</kw>
 <arg>${Input_Apelido}</arg>
 <arg>Mii</arg>
-<status status="NOT RUN" start="2025-02-26T14:54:58.270964" elapsed="0.000033"/>
+<status status="PASS" start="2025-02-27T16:24:31.489506" elapsed="0.078696"/>
 </kw>
-<status status="FAIL" start="2025-02-26T14:54:47.704958" elapsed="10.566132">Elemento xpath=/html/body/div[4]/div[3]/div[2]/div/div[5]/div/div[3]/button não foi encontrado durante a execução do caso de teste: CT01: Efetuar alteração no cadastro do usuário</status>
+<status status="PASS" start="2025-02-27T16:24:28.473911" elapsed="3.094377"/>
 </kw>
 <doc>Card-XXX</doc>
 <tag>F04CT01_AlteraCadUsuário</tag>
-<status status="FAIL" start="2025-02-26T14:54:29.526108" elapsed="28.745541">Elemento xpath=/html/body/div[4]/div[3]/div[2]/div/div[5]/div/div[3]/button não foi encontrado durante a execução do caso de teste: CT01: Efetuar alteração no cadastro do usuário</status>
+<status status="PASS" start="2025-02-27T16:24:12.174087" elapsed="19.394529"/>
 </test>
 <doc>Suíte de testes de Validação do login do Perfil do Usuário</doc>
-<status status="FAIL" start="2025-02-26T14:54:29.515843" elapsed="28.756904"/>
+<status status="PASS" start="2025-02-27T16:24:12.161452" elapsed="19.407759"/>
 </suite>
-<status status="FAIL" start="2025-02-26T14:53:33.258190" elapsed="85.016110"/>
+<status status="PASS" start="2025-02-27T16:23:26.292566" elapsed="65.277640"/>
 </suite>
 <statistics>
 <total>
-<stat pass="4" fail="1" skip="0">All Tests</stat>
+<stat pass="5" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 <stat pass="1" fail="0" skip="0">F01CT01_Login</stat>
 <stat pass="1" fail="0" skip="0">F02CT01_CreateAccount</stat>
 <stat pass="1" fail="0" skip="0">F03CT01_RecuperaSenha</stat>
 <stat pass="1" fail="0" skip="0">F03CT02_CadastraSenha</stat>
-<stat pass="0" fail="1" skip="0">F04CT01_AlteraCadUsuário</stat>
+<stat pass="1" fail="0" skip="0">F04CT01_AlteraCadUsuário</stat>
 </tag>
 <suite>
-<stat name="TestCases" id="s1" pass="4" fail="1" skip="0">TestCases</stat>
+<stat name="TestCases" id="s1" pass="5" fail="0" skip="0">TestCases</stat>
 <stat name="F01 LoginTest" id="s1-s1" pass="1" fail="0" skip="0">TestCases.F01 LoginTest</stat>
 <stat name="F02 CreateAccountTest" id="s1-s2" pass="1" fail="0" skip="0">TestCases.F02 CreateAccountTest</stat>
 <stat name="F03 RecuperacaoSenha" id="s1-s3" pass="2" fail="0" skip="0">TestCases.F03 RecuperacaoSenha</stat>
-<stat name="F04 AlteraCadUsuario" id="s1-s4" pass="0" fail="1" skip="0">TestCases.F04 AlteraCadUsuario</stat>
+<stat name="F04 AlteraCadUsuario" id="s1-s4" pass="1" fail="0" skip="0">TestCases.F04 AlteraCadUsuario</stat>
 </suite>
 </statistics>
 <errors>

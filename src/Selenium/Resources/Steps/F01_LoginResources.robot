@@ -9,7 +9,7 @@ Resource            ../../Resources/Locators/Perfil_Locators.robot
 *** Keywords ***
 Dado que esteja na página home
     Abrir página home
-
+     
 Quando clicar no perfil do usuário 
     Clicar no Perfil do Usuário  ${Perfil}
 
